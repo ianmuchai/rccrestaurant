@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import "./refinements.css";
 
 export const metadata: Metadata = {
   title: "RCC Restaurant | Kitengela",
@@ -19,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head><meta name="theme-color" content="#54151c" /><link rel="stylesheet" href="/vendor/leaflet.css" /></head>
+      <head><meta name="theme-color" content="#54151c" /><link rel="stylesheet" href="/fonts/fonts.css" /><link rel="stylesheet" href="/vendor/leaflet.css" /></head>
       <body className="antialiased">{children}</body>
     </html>
   );

@@ -1,6 +1,6 @@
 # RCC Restaurant · Kitengela
 
-A full-stack, responsive restaurant PWA with a premium poster carousel, translucent cards, imported menu, cart, delivery map pin selection, Google Maps handoff, M-Pesa integration and protected staff studio.
+A full-stack restaurant PWA with four public pages, a muted inline video carousel, smaller non-italic typography, 85 supplied Drive photographs, a category-based menu, shared cart, delivery maps, M-Pesa integration and a protected staff studio.
 
 ## Run locally
 
@@ -13,7 +13,7 @@ npm run typecheck
 npm run build
 ```
 
-If Windows blocks `npm.ps1`, use `npm.cmd` or invoke the installed `npm-cli.js` with Node. In this environment the Sites helper's Windows npm shim also failed, so the verified direct build command is `node scripts/run-framework.mjs build`.
+If Windows blocks `npm.ps1`, use `npm.cmd` or invoke the installed `npm-cli.js` with Node. In this environment the Sites helper's Windows npm shim also failed, so the verified direct build command is `node scripts/build-rcc.mjs`.
 
 Build once, then apply each SQL migration in `drizzle/` exactly once to local D1:
 
@@ -55,7 +55,7 @@ Official API: https://developer.safaricom.co.ke/apis/MpesaExpressSimulate
 
 The RCC logo and food photographs are extracted from supplied PDFs. The main mandi poster is AI-generated illustrative artwork, not a claim about a photographed RCC dish. Food imagery is labeled illustrative on the website. Built-in image generation was used with this prompt: “Cinematic premium food photograph for an RCC website: roasted goat mandi and golden spiced rice on dark ceramic, burgundy stone and crimson linen, warm raking light, right-weighted feast and dark left negative space. No people, interiors, logos, words or watermark.” Master artwork is `artwork/mandi-poster.png`; optimized website asset is `public/assets/mandi-poster.webp`.
 
-The latest approved direction uses posters, minimal copy and no narration or playback controls. No restaurant video footage was supplied.
+The latest revision uses three MP4 photo-motion clips made from RCC?s supplied images, with no narration or playback controls. Reduced motion and data-saving preferences show still photos. These are animated photographs, not filmed footage; the corrected link points to the already-imported food-photography folder. The remaining three folders supplied 85 accessible photographs. Their original filenames, IDs and source folders are recorded in lib/photo-provenance.json.
 
 ## Maps
 
@@ -72,3 +72,7 @@ Cart preferences use local storage; order access tokens live only in session sto
 ## Verification
 
 Run `npm test` for trusted pricing, input/coordinate validation, allowlist rules, M-Pesa readiness/reconciliation and service-worker cache boundaries. Run `npm run typecheck` and the production build for compilation checks. Browser QA covers desktop/mobile layouts, carousel, cart, checkout, coordinate pin selection and Google Maps links; unconfigured staff/payment endpoints fail closed. Live provider settlement and installation on physical iPhone/Android hardware require launch testing.
+
+## Public pages and revised offline build
+
+The homepage (`/`) has a video carousel and Order now links to `/menu`. The menu groups all 300 entries under their 37 original categories. `/moments` and `/visit` are separate pages. The cart persists across page navigation. Fonts are self-hosted under public/fonts. `scripts/build-rcc.mjs` builds the Worker and writes a public static/font precache manifest, so the first completed service-worker install can reload offline without a second online visit. Large carousel MP4s remain excluded from automatic offline caching.
