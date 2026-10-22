@@ -1,0 +1,5177 @@
+[
+  {
+    "id": "p2-rcc-combo",
+    "name": "RCC Combo",
+    "category": "Breakfast",
+    "description": "(two eggs. One sausage, chapati/nduma and ngwaci, tea/coffee)",
+    "price": 400,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 400
+      }
+    ],
+    "page": 2,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p2-english-breakfast",
+    "name": "English Breakfast",
+    "category": "Breakfast",
+    "description": "(two eggs, two sausages, baked beans, fruits mini bowl, home fries, grilled tomato, bread toast)",
+    "price": 600,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 600
+      }
+    ],
+    "page": 2,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p2-shakshuka-sunrise",
+    "name": "Shakshuka Sunrise",
+    "category": "Breakfast",
+    "description": "(chef’s special base sauce, poached eggs topped with crumbled feta cheese served with chapati/anjeera/bread toast)",
+    "price": 500,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 500
+      }
+    ],
+    "page": 2,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p2-somali-breakfast",
+    "name": "Somali Breakfast",
+    "category": "Breakfast",
+    "description": "(fresh goat liver or kidney fried with onions, capsicums and garlic seasoned to taste served with chapati/anjeera)",
+    "price": 550,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 550
+      }
+    ],
+    "page": 2,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p2-esbesso",
+    "name": "Esbesso",
+    "category": "Breakfast",
+    "description": "(cubes of goat meat & potatoes cooked in its own broth served with either anjera or chapati)",
+    "price": 500,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 500
+      }
+    ],
+    "page": 2,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p2-camel-suqaar",
+    "name": "Camel Suqaar",
+    "category": "Breakfast",
+    "description": "(Cubes of camel meat freshly fried with onions, capsicum, carrots and garlic served with anjera/chapati)",
+    "price": 500,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 500
+      }
+    ],
+    "page": 2,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p2-swahili-breakfast",
+    "name": "Swahili Breakfast",
+    "category": "Breakfast",
+    "description": "(freshly cooked beans in coconut sauce seasoned to taste served with either mahamri (3pcs) or chapati (1pc))",
+    "price": 450,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 450
+      }
+    ],
+    "page": 2,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p2-chapati-saldato-2pcs",
+    "name": "Chapati Saldato (2Pcs)",
+    "category": "Breakfast",
+    "description": "",
+    "price": 300,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 300
+      }
+    ],
+    "page": 2,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p2-oats-porridge",
+    "name": "Oats Porridge",
+    "category": "Breakfast",
+    "description": "",
+    "price": 150,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 150
+      }
+    ],
+    "page": 2,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p2-oats-porridge-special",
+    "name": "Oats Porridge Special",
+    "category": "Breakfast",
+    "description": "",
+    "price": 300,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 300
+      }
+    ],
+    "page": 2,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p2-boiled-eggs-2pcs",
+    "name": "Boiled Eggs (2Pcs)",
+    "category": "Eggs Of Your Choice",
+    "description": "",
+    "price": 100,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 100
+      }
+    ],
+    "page": 2,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p2-scramble-eggs",
+    "name": "Scramble Eggs",
+    "category": "Eggs Of Your Choice",
+    "description": "",
+    "price": 200,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 200
+      }
+    ],
+    "page": 2,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p2-fried-eggs",
+    "name": "Fried Eggs",
+    "category": "Eggs Of Your Choice",
+    "description": "",
+    "price": 250,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 250
+      }
+    ],
+    "page": 2,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p2-cheesy-eggs",
+    "name": "Cheesy Eggs",
+    "category": "Eggs Of Your Choice",
+    "description": "",
+    "price": 300,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 300
+      }
+    ],
+    "page": 2,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p2-spanish-omelette",
+    "name": "Spanish Omelette",
+    "category": "Eggs Of Your Choice",
+    "description": "",
+    "price": 300,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 300
+      }
+    ],
+    "page": 2,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p2-egg-1pc",
+    "name": "Egg (1Pc)",
+    "category": "Breakfast Extras",
+    "description": "",
+    "price": 50,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 50
+      }
+    ],
+    "page": 2,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p2-mahamri-2pcs",
+    "name": "Mahamri (2Pcs)",
+    "category": "Breakfast Extras",
+    "description": "",
+    "price": 50,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 50
+      }
+    ],
+    "page": 2,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p2-bread-toast-2pcs",
+    "name": "Bread Toast (2Pcs)",
+    "category": "Breakfast Extras",
+    "description": "",
+    "price": 50,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 50
+      }
+    ],
+    "page": 2,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p2-chapati-1pc",
+    "name": "Chapati (1Pc)",
+    "category": "Breakfast Extras",
+    "description": "",
+    "price": 80,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 80
+      }
+    ],
+    "page": 2,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p2-sausage-1pc",
+    "name": "Sausage (1Pc)",
+    "category": "Breakfast Extras",
+    "description": "",
+    "price": 100,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 100
+      }
+    ],
+    "page": 2,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p2-anjera-mayai-1pc",
+    "name": "Anjera Mayai (1Pc)",
+    "category": "Breakfast Extras",
+    "description": "",
+    "price": 100,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 100
+      }
+    ],
+    "page": 2,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p2-brown-chapati-1pc",
+    "name": "Brown Chapati (1Pc)",
+    "category": "Breakfast Extras",
+    "description": "",
+    "price": 100,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 100
+      }
+    ],
+    "page": 2,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p3-chapati-2-kk",
+    "name": "Chapati (2) Kk",
+    "category": "Snacks And Bites",
+    "description": "",
+    "price": 250,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 250
+      }
+    ],
+    "page": 3,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p3-anjeera-2-kk",
+    "name": "Anjeera (2) Kk",
+    "category": "Snacks And Bites",
+    "description": "",
+    "price": 250,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 250
+      }
+    ],
+    "page": 3,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p3-samosa-portion-3pcs-chicken-beef-fish",
+    "name": "Samosa Portion (3Pcs) [Chicken|Beef|Fish]",
+    "category": "Snacks And Bites",
+    "description": "",
+    "price": 250,
+    "options": [
+      {
+        "id": "chicken",
+        "label": "Chicken",
+        "price": 250
+      },
+      {
+        "id": "beef",
+        "label": "Beef",
+        "price": 250
+      },
+      {
+        "id": "fish",
+        "label": "Fish",
+        "price": 250
+      }
+    ],
+    "page": 3,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p3-arrow-roots-nduma",
+    "name": "Arrow Roots (Nduma)",
+    "category": "Snacks And Bites",
+    "description": "",
+    "price": 250,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 250
+      }
+    ],
+    "page": 3,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p3-sweet-potatoes-ngwaci",
+    "name": "Sweet Potatoes (Ngwaci)",
+    "category": "Snacks And Bites",
+    "description": "",
+    "price": 250,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 250
+      }
+    ],
+    "page": 3,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p3-beef-kebabs",
+    "name": "Beef Kebabs",
+    "category": "Snacks And Bites",
+    "description": "",
+    "price": 250,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 250
+      }
+    ],
+    "page": 3,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p3-chapati-roll",
+    "name": "Chapati Roll",
+    "category": "Snacks And Bites",
+    "description": "",
+    "price": 300,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 300
+      }
+    ],
+    "page": 3,
+    "available": true,
+    "needsReview": true
+  },
+  {
+    "id": "p3-french-toast-3pcs",
+    "name": "French Toast (3Pcs)",
+    "category": "Snacks And Bites",
+    "description": "",
+    "price": 300,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 300
+      }
+    ],
+    "page": 3,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p3-choma-sausages-2pcs",
+    "name": "Choma Sausages (2Pcs)",
+    "category": "Snacks And Bites",
+    "description": "",
+    "price": 300,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 300
+      }
+    ],
+    "page": 3,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p3-roasted-plaintain",
+    "name": "Roasted Plaintain",
+    "category": "Snacks And Bites",
+    "description": "",
+    "price": 400,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 400
+      }
+    ],
+    "page": 3,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p3-american-fluffy-pancakes-3pcs",
+    "name": "American Fluffy Pancakes (3Pcs)",
+    "category": "Snacks And Bites",
+    "description": "",
+    "price": 500,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 500
+      }
+    ],
+    "page": 3,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p3-chicken-wings-buffalo-or-bbq-6pcs",
+    "name": "Chicken Wings Buffalo Or BBQ (6Pcs)",
+    "category": "Snacks And Bites",
+    "description": "",
+    "price": 600,
+    "options": [
+      {
+        "id": "buffalo",
+        "label": "Buffalo",
+        "price": 600
+      },
+      {
+        "id": "bbq",
+        "label": "BBQ",
+        "price": 600
+      }
+    ],
+    "page": 3,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p3-goat-soup",
+    "name": "Goat Soup",
+    "category": "Healthy Soups",
+    "description": "",
+    "price": 300,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 300
+      }
+    ],
+    "page": 3,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p3-cream-of-mushroom-soup-vegan",
+    "name": "Cream Of Mushroom Soup (Vegan)",
+    "category": "Healthy Soups",
+    "description": "",
+    "price": 400,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 400
+      }
+    ],
+    "page": 3,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p3-cream-of-vegetable-soup",
+    "name": "Cream Of Vegetable Soup",
+    "category": "Healthy Soups",
+    "description": "",
+    "price": 400,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 400
+      }
+    ],
+    "page": 3,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p3-butternut-soup-vegan",
+    "name": "Butternut Soup (Vegan)",
+    "category": "Healthy Soups",
+    "description": "",
+    "price": 400,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 400
+      }
+    ],
+    "page": 3,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p3-cream-of-chicken-soup-non-vegan",
+    "name": "Cream Of Chicken Soup (Non-Vegan)",
+    "category": "Healthy Soups",
+    "description": "",
+    "price": 500,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 500
+      }
+    ],
+    "page": 3,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p3-fresh-fruit-salad",
+    "name": "Fresh Fruit Salad",
+    "category": "Wholesome Salad",
+    "description": "",
+    "price": 300,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 300
+      }
+    ],
+    "page": 3,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p3-fruit-salad-special",
+    "name": "Fruit Salad Special",
+    "category": "Wholesome Salad",
+    "description": "",
+    "price": 450,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 450
+      }
+    ],
+    "page": 3,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p3-house-cobb-salad",
+    "name": "House Cobb Salad",
+    "category": "Wholesome Salad",
+    "description": "",
+    "price": 450,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 450
+      }
+    ],
+    "page": 3,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p3-chicken-salad",
+    "name": "Chicken Salad",
+    "category": "Wholesome Salad",
+    "description": "",
+    "price": 450,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 450
+      }
+    ],
+    "page": 3,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p3-tuna-salad",
+    "name": "Tuna Salad",
+    "category": "Wholesome Salad",
+    "description": "",
+    "price": 400,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 400
+      }
+    ],
+    "page": 3,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p3-greek-salad",
+    "name": "Greek Salad",
+    "category": "Wholesome Salad",
+    "description": "",
+    "price": 500,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 500
+      }
+    ],
+    "page": 3,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p4-camel-suqaar",
+    "name": "Camel Suqaar (¼)",
+    "category": "Somali And Arab Cuisine",
+    "description": "",
+    "price": 400,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 400
+      }
+    ],
+    "page": 4,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p4-chicken-suqaar",
+    "name": "Chicken Suqaar",
+    "category": "Somali And Arab Cuisine",
+    "description": "",
+    "price": 800,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 800
+      }
+    ],
+    "page": 4,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p4-alesso-goat",
+    "name": "Alesso Goat",
+    "category": "Somali And Arab Cuisine",
+    "description": "",
+    "price": 900,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 900
+      }
+    ],
+    "page": 4,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p4-arosto-goat",
+    "name": "Arosto Goat",
+    "category": "Somali And Arab Cuisine",
+    "description": "",
+    "price": 900,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 900
+      }
+    ],
+    "page": 4,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p4-chicken-mandi",
+    "name": "Chicken Mandi (¼)",
+    "category": "Somali And Arab Cuisine",
+    "description": "",
+    "price": 600,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 600
+      }
+    ],
+    "page": 4,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p4-alesso-kondoo",
+    "name": "Alesso Kondoo",
+    "category": "Somali And Arab Cuisine",
+    "description": "",
+    "price": 1000,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 1000
+      }
+    ],
+    "page": 4,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p4-kostato-boul-fry",
+    "name": "Kostato Boul/Fry",
+    "category": "Somali And Arab Cuisine",
+    "description": "",
+    "price": 1000,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 1000
+      }
+    ],
+    "page": 4,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p4-mutton-mandi",
+    "name": "Mutton Mandi",
+    "category": "Somali And Arab Cuisine",
+    "description": "",
+    "price": 1000,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 1000
+      }
+    ],
+    "page": 4,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p4-fish-mandi",
+    "name": "Fish Mandi",
+    "category": "Somali And Arab Cuisine",
+    "description": "",
+    "price": 1200,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 1200
+      }
+    ],
+    "page": 4,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p4-hanid-mandi-shoulder",
+    "name": "Hanid Mandi (Shoulder)",
+    "category": "Somali And Arab Cuisine",
+    "description": "",
+    "price": 1400,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 1400
+      }
+    ],
+    "page": 4,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p4-butter-chicken-curry",
+    "name": "Butter Chicken Curry",
+    "category": "RCC Specials And Curries",
+    "description": "",
+    "price": 800,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 800
+      }
+    ],
+    "page": 4,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p4-thai-peanut-chicken-curry",
+    "name": "Thai Peanut Chicken Curry",
+    "category": "RCC Specials And Curries",
+    "description": "",
+    "price": 900,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 900
+      }
+    ],
+    "page": 4,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p4-chicken-curry",
+    "name": "Chicken Curry",
+    "category": "RCC Specials And Curries",
+    "description": "",
+    "price": 800,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 800
+      }
+    ],
+    "page": 4,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p4-kabsa-rice",
+    "name": "Kabsa Rice",
+    "category": "RCC Specials And Curries",
+    "description": "(either served with chicken or goat meat)",
+    "price": 900,
+    "options": [
+      {
+        "id": "chicken",
+        "label": "Chicken",
+        "price": 900
+      },
+      {
+        "id": "goat",
+        "label": "Goat",
+        "price": 900
+      }
+    ],
+    "page": 4,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p4-biryani-chicken",
+    "name": "Biryani Chicken",
+    "category": "RCC Specials And Curries",
+    "description": "",
+    "price": 900,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 900
+      }
+    ],
+    "page": 4,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p4-fish-tikka-biryani",
+    "name": "Fish Tikka Biryani",
+    "category": "RCC Specials And Curries",
+    "description": "",
+    "price": 900,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 900
+      }
+    ],
+    "page": 4,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p4-fish-curry",
+    "name": "Fish Curry",
+    "category": "RCC Specials And Curries",
+    "description": "",
+    "price": 900,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 900
+      }
+    ],
+    "page": 4,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p4-shishtauk-chicken",
+    "name": "Shishtauk Chicken",
+    "category": "RCC Specials And Curries",
+    "description": "",
+    "price": 1000,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 1000
+      }
+    ],
+    "page": 4,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p4-grilled-camel-steak",
+    "name": "Grilled Camel Steak",
+    "category": "RCC Grills",
+    "description": "",
+    "price": 900,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 900
+      }
+    ],
+    "page": 4,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p4-grilled-fish-fillet",
+    "name": "Grilled Fish Fillet",
+    "category": "RCC Grills",
+    "description": "",
+    "price": 900,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 900
+      }
+    ],
+    "page": 4,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p4-sizzling-chicken-stir-fry",
+    "name": "Sizzling Chicken Stir Fry",
+    "category": "RCC Grills",
+    "description": "",
+    "price": 1000,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 1000
+      }
+    ],
+    "page": 4,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p4-grilled-salmon-fish",
+    "name": "Grilled Salmon Fish",
+    "category": "RCC Grills",
+    "description": "(freshly marinated salmon fillet grilled to perfection served with a side bowl of fruits, mixed veggies, your choice of sidedish)",
+    "price": 2500,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 2500
+      }
+    ],
+    "page": 4,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p4-whole-fish-wet-or-dry-fry",
+    "name": "Whole Fish (Wet Or Dry Fry)",
+    "category": "RCC Grills",
+    "description": "",
+    "price": 800,
+    "options": [
+      {
+        "id": "wet-fry",
+        "label": "Wet fry",
+        "price": 800
+      },
+      {
+        "id": "dry-fry",
+        "label": "Dry fry",
+        "price": 800
+      }
+    ],
+    "page": 4,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p4-bbq-chicken",
+    "name": "BBQ Chicken (½)",
+    "category": "RCC Grills",
+    "description": "",
+    "price": 600,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 600
+      }
+    ],
+    "page": 4,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p4-grilled-chicken-breast",
+    "name": "Grilled Chicken Breast",
+    "category": "RCC Grills",
+    "description": "",
+    "price": 700,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 700
+      }
+    ],
+    "page": 4,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p5-full-goat-mandi-platter-dining-inn",
+    "name": "Full Goat Mandi Platter · Dine-in",
+    "category": "Platters",
+    "description": "Dine-in price only. Choose the takeaway platter for online pickup or delivery.",
+    "price": 15000,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 15000
+      }
+    ],
+    "page": 5,
+    "available": false,
+    "needsReview": false
+  },
+  {
+    "id": "p5-take-away",
+    "name": "Full Goat Mandi Platter · Takeaway",
+    "category": "Platters",
+    "description": "(whole goat grilled to desired perfection achieving a perfect crust while remaining intact to be served with amount portions of rice, boiled eggs, mixed veggies, goat liver, salad, French fries, and fresh juice)",
+    "price": 18000,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 18000
+      }
+    ],
+    "page": 5,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p5-full-platter-for-6-pax-8-pax",
+    "name": "Full Platter For 6 Pax – 8 Pax",
+    "category": "Platters",
+    "description": "(2 portions of meat of your choice, ½ chicken grilled, 1 portion fish fillet, shawarma, chapati, served with 3 portions of rice, pasta, and bananas)",
+    "price": 5000,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 5000
+      }
+    ],
+    "page": 5,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p5-full-platter-for-3-pax-5-pax",
+    "name": "Full Platter For 3 Pax – 5 Pax",
+    "category": "Platters",
+    "description": "(Arosto,Suqaar,1/2 grilled Chicken, 3 rices, chapati, shawarma Banana)",
+    "price": 3500,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 3500
+      }
+    ],
+    "page": 5,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p5-white-rice",
+    "name": "White Rice ½",
+    "category": "Rice Side Dishes",
+    "description": "",
+    "price": 250,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 250
+      }
+    ],
+    "page": 5,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p5-kabsa-rice",
+    "name": "Kabsa Rice ½",
+    "category": "Rice Side Dishes",
+    "description": "",
+    "price": 300,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 300
+      }
+    ],
+    "page": 5,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p5-biryani-rice",
+    "name": "Biryani Rice ½",
+    "category": "Rice Side Dishes",
+    "description": "",
+    "price": 300,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 300
+      }
+    ],
+    "page": 5,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p5-chicken-pilau",
+    "name": "Chicken Pilau",
+    "category": "Rice Side Dishes",
+    "description": "",
+    "price": 700,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 700
+      }
+    ],
+    "page": 5,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p5-mutton-pilau",
+    "name": "Mutton Pilau",
+    "category": "Rice Side Dishes",
+    "description": "",
+    "price": 600,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 600
+      }
+    ],
+    "page": 5,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p5-pilau-plain",
+    "name": "Pilau Plain",
+    "category": "Rice Side Dishes",
+    "description": "",
+    "price": 300,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 300
+      }
+    ],
+    "page": 5,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p5-chicken-fried-rice",
+    "name": "Chicken Fried Rice",
+    "category": "Rice Side Dishes",
+    "description": "",
+    "price": 700,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 700
+      }
+    ],
+    "page": 5,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p5-mixed-vegetables-rice",
+    "name": "Mixed Vegetables Rice",
+    "category": "Rice Side Dishes",
+    "description": "",
+    "price": 500,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 500
+      }
+    ],
+    "page": 5,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p5-rice-saldato",
+    "name": "Rice Saldato",
+    "category": "Rice Side Dishes",
+    "description": "",
+    "price": 450,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 450
+      }
+    ],
+    "page": 5,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p5-ugali-plain",
+    "name": "Ugali Plain",
+    "category": "Side Dishes",
+    "description": "",
+    "price": 100,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 100
+      }
+    ],
+    "page": 5,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p5-ugali-spinach",
+    "name": "Ugali Spinach",
+    "category": "Side Dishes",
+    "description": "",
+    "price": 200,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 200
+      }
+    ],
+    "page": 5,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p5-ugali-special",
+    "name": "Ugali Special",
+    "category": "Side Dishes",
+    "description": "",
+    "price": 350,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 350
+      }
+    ],
+    "page": 5,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p5-ugali-brown",
+    "name": "Ugali Brown",
+    "category": "Side Dishes",
+    "description": "",
+    "price": 150,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 150
+      }
+    ],
+    "page": 5,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p5-potato-wedges",
+    "name": "Potato Wedges",
+    "category": "Side Dishes",
+    "description": "",
+    "price": 400,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 400
+      }
+    ],
+    "page": 5,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p5-french-fries",
+    "name": "French Fries",
+    "category": "Side Dishes",
+    "description": "",
+    "price": 200,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 200
+      }
+    ],
+    "page": 5,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p5-chips-masala",
+    "name": "Chips Masala",
+    "category": "Side Dishes",
+    "description": "",
+    "price": 350,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 350
+      }
+    ],
+    "page": 5,
+    "available": true,
+    "needsReview": true
+  },
+  {
+    "id": "p5-home-fries",
+    "name": "Home Fries",
+    "category": "Side Dishes",
+    "description": "",
+    "price": 200,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 200
+      }
+    ],
+    "page": 5,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p5-roast-potatoes",
+    "name": "Roast Potatoes",
+    "category": "Side Dishes",
+    "description": "",
+    "price": 250,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 250
+      }
+    ],
+    "page": 5,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p5-mash-potatoes",
+    "name": "Mash Potatoes",
+    "category": "Side Dishes",
+    "description": "",
+    "price": 300,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 300
+      }
+    ],
+    "page": 5,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p5-poussin-chips",
+    "name": "Poussin Chips",
+    "category": "Side Dishes",
+    "description": "",
+    "price": 300,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 300
+      }
+    ],
+    "page": 5,
+    "available": true,
+    "needsReview": true
+  },
+  {
+    "id": "p5-yellow-beans",
+    "name": "Yellow Beans",
+    "category": "Side Dishes",
+    "description": "",
+    "price": 200,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 200
+      }
+    ],
+    "page": 5,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p5-creamed-spinach",
+    "name": "Creamed Spinach",
+    "category": "Side Dishes",
+    "description": "",
+    "price": 150,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 150
+      }
+    ],
+    "page": 5,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p5-spinach-cabbage",
+    "name": "Spinach / Cabbage",
+    "category": "Side Dishes",
+    "description": "",
+    "price": 100,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 100
+      }
+    ],
+    "page": 5,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p5-mukimo-special",
+    "name": "Mukimo Special",
+    "category": "Side Dishes",
+    "description": "",
+    "price": 350,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 350
+      }
+    ],
+    "page": 5,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p5-mix-vegetables",
+    "name": "Mix Vegetables",
+    "category": "Side Dishes",
+    "description": "",
+    "price": 300,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 300
+      }
+    ],
+    "page": 5,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p5-kienyeji-greens",
+    "name": "Kienyeji Greens",
+    "category": "Side Dishes",
+    "description": "",
+    "price": 150,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 150
+      }
+    ],
+    "page": 5,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p5-githeri",
+    "name": "Githeri",
+    "category": "Side Dishes",
+    "description": "",
+    "price": 200,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 200
+      }
+    ],
+    "page": 5,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p5-githeri-special",
+    "name": "Githeri Special",
+    "category": "Side Dishes",
+    "description": "",
+    "price": 250,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 250
+      }
+    ],
+    "page": 5,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p5-naan-bread",
+    "name": "Naan Bread",
+    "category": "Side Dishes",
+    "description": "",
+    "price": 150,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 150
+      }
+    ],
+    "page": 5,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p6-chicken-alfredo",
+    "name": "Chicken Alfredo",
+    "category": "Pasta Corner",
+    "description": "",
+    "price": 900,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 900
+      }
+    ],
+    "page": 6,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p6-spaghetti-bolognese",
+    "name": "Spaghetti Bolognese",
+    "category": "Pasta Corner",
+    "description": "",
+    "price": 900,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 900
+      }
+    ],
+    "page": 6,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p6-all-arabiatta-penne-with-chicken",
+    "name": "All Arabiatta Penne With Chicken",
+    "category": "Pasta Corner",
+    "description": "",
+    "price": 750,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 750
+      }
+    ],
+    "page": 6,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p6-spaghetti-saldato",
+    "name": "Spaghetti Saldato",
+    "category": "Pasta Corner",
+    "description": "",
+    "price": 500,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 500
+      }
+    ],
+    "page": 6,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p6-spaghetti-plain",
+    "name": "Spaghetti Plain",
+    "category": "Pasta Corner",
+    "description": "",
+    "price": 400,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 400
+      }
+    ],
+    "page": 6,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p6-french-fries",
+    "name": "French Fries",
+    "category": "Fries",
+    "description": "",
+    "price": 200,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 200
+      }
+    ],
+    "page": 6,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p6-masala-chips",
+    "name": "Masala Chips",
+    "category": "Fries",
+    "description": "",
+    "price": 300,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 300
+      }
+    ],
+    "page": 6,
+    "available": true,
+    "needsReview": true
+  },
+  {
+    "id": "p6-garlic-chips",
+    "name": "Garlic Chips",
+    "category": "Fries",
+    "description": "",
+    "price": 300,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 300
+      }
+    ],
+    "page": 6,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p6-pousin-chips",
+    "name": "Pousin Chips",
+    "category": "Fries",
+    "description": "",
+    "price": 250,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 250
+      }
+    ],
+    "page": 6,
+    "available": true,
+    "needsReview": true
+  },
+  {
+    "id": "p6-loaded-fries",
+    "name": "Loaded Fries",
+    "category": "Fries",
+    "description": "",
+    "price": 800,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 800
+      }
+    ],
+    "page": 6,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p6-grilled-bbq-burger-chicken-or-beef",
+    "name": "Grilled BBQ Burger (Chicken Or Beef)",
+    "category": "Gourmet Burgers",
+    "description": "",
+    "price": 550,
+    "options": [
+      {
+        "id": "chicken",
+        "label": "Chicken",
+        "price": 550
+      },
+      {
+        "id": "beef",
+        "label": "Beef",
+        "price": 550
+      }
+    ],
+    "page": 6,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p6-grilled-cheese-burger-chicken-or-beef",
+    "name": "Grilled Cheese Burger (Chicken Or Beef)",
+    "category": "Gourmet Burgers",
+    "description": "",
+    "price": 650,
+    "options": [
+      {
+        "id": "chicken",
+        "label": "Chicken",
+        "price": 650
+      },
+      {
+        "id": "beef",
+        "label": "Beef",
+        "price": 650
+      }
+    ],
+    "page": 6,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p6-grilled-hawaiian-burger-chicken-or-beef",
+    "name": "Grilled Hawaiian Burger (Chicken Or Beef)",
+    "category": "Gourmet Burgers",
+    "description": "",
+    "price": 700,
+    "options": [
+      {
+        "id": "chicken",
+        "label": "Chicken",
+        "price": 700
+      },
+      {
+        "id": "beef",
+        "label": "Beef",
+        "price": 700
+      }
+    ],
+    "page": 6,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p6-tuna-sandwich",
+    "name": "Tuna Sandwich",
+    "category": "Gourmet Sandwich",
+    "description": "",
+    "price": 700,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 700
+      }
+    ],
+    "page": 6,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p6-egg-mayo-sandwich",
+    "name": "Egg Mayo Sandwich",
+    "category": "Gourmet Sandwich",
+    "description": "",
+    "price": 600,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 600
+      }
+    ],
+    "page": 6,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p6-chicken-and-cheese-sandwich",
+    "name": "Chicken And Cheese Sandwich",
+    "category": "Gourmet Sandwich",
+    "description": "",
+    "price": 800,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 800
+      }
+    ],
+    "page": 6,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p6-taco-beef-or-chicken",
+    "name": "Taco (Beef Or Chicken)",
+    "category": "Gourmet Sandwich",
+    "description": "",
+    "price": 900,
+    "options": [
+      {
+        "id": "beef",
+        "label": "Beef",
+        "price": 900
+      },
+      {
+        "id": "chicken",
+        "label": "Chicken",
+        "price": 900
+      }
+    ],
+    "page": 6,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p6-chicken-mayo-and",
+    "name": "Chicken Mayo And Mozzarella Sandwich",
+    "category": "Gourmet Sandwich",
+    "description": "",
+    "price": 900,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 900
+      }
+    ],
+    "page": 6,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p6-hotdog-plain",
+    "name": "Hotdog Plain",
+    "category": "Kid’S Corner",
+    "description": "",
+    "price": 200,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 200
+      }
+    ],
+    "page": 6,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p6-chillislaw-dog",
+    "name": "Chillislaw Dog",
+    "category": "Kid’S Corner",
+    "description": "",
+    "price": 300,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 300
+      }
+    ],
+    "page": 6,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p6-hotdog-and-chips",
+    "name": "Hotdog And Chips",
+    "category": "Kid’S Corner",
+    "description": "",
+    "price": 350,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 350
+      }
+    ],
+    "page": 6,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p6-chips-and-sausage",
+    "name": "Chips And Sausage",
+    "category": "Kid’S Corner",
+    "description": "",
+    "price": 300,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 300
+      }
+    ],
+    "page": 6,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p6-chillislaw-dog-and-chips",
+    "name": "Chillislaw Dog And Chips",
+    "category": "Kid’S Corner",
+    "description": "",
+    "price": 400,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 400
+      }
+    ],
+    "page": 6,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p6-chicken-drumsticks-3pcs",
+    "name": "Chicken Drumsticks (3Pcs)",
+    "category": "Kid’S Corner",
+    "description": "",
+    "price": 450,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 450
+      }
+    ],
+    "page": 6,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p6-chicken-nuggets-6pcs",
+    "name": "Chicken Nuggets (6Pcs)",
+    "category": "Kid’S Corner",
+    "description": "",
+    "price": 500,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 500
+      }
+    ],
+    "page": 6,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p6-fish-fingers-5pcs",
+    "name": "Fish Fingers (5Pcs)",
+    "category": "Kid’S Corner",
+    "description": "",
+    "price": 600,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 600
+      }
+    ],
+    "page": 6,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p7-margaritta-pizza",
+    "name": "Margaritta Pizza",
+    "category": "Pizzas",
+    "description": "",
+    "price": 700,
+    "options": [
+      {
+        "id": "medium",
+        "label": "Medium",
+        "price": 700
+      },
+      {
+        "id": "large",
+        "label": "Large",
+        "price": 900
+      }
+    ],
+    "page": 7,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p7-peri-peri-pizza",
+    "name": "Peri Peri Pizza",
+    "category": "Pizzas",
+    "description": "",
+    "price": 800,
+    "options": [
+      {
+        "id": "medium",
+        "label": "Medium",
+        "price": 800
+      },
+      {
+        "id": "large",
+        "label": "Large",
+        "price": 1000
+      }
+    ],
+    "page": 7,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p7-chicken-tikka-pizza",
+    "name": "Chicken Tikka Pizza",
+    "category": "Pizzas",
+    "description": "",
+    "price": 800,
+    "options": [
+      {
+        "id": "medium",
+        "label": "Medium",
+        "price": 800
+      },
+      {
+        "id": "large",
+        "label": "Large",
+        "price": 1000
+      }
+    ],
+    "page": 7,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p7-chicken-bbq-pizza",
+    "name": "Chicken BBQ Pizza",
+    "category": "Pizzas",
+    "description": "",
+    "price": 800,
+    "options": [
+      {
+        "id": "medium",
+        "label": "Medium",
+        "price": 800
+      },
+      {
+        "id": "large",
+        "label": "Large",
+        "price": 1000
+      }
+    ],
+    "page": 7,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p7-haiwaiian-pizza",
+    "name": "Haiwaiian Pizza",
+    "category": "Pizzas",
+    "description": "",
+    "price": 900,
+    "options": [
+      {
+        "id": "medium",
+        "label": "Medium",
+        "price": 900
+      },
+      {
+        "id": "large",
+        "label": "Large",
+        "price": 1200
+      }
+    ],
+    "page": 7,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p7-rcc-signature-pizza",
+    "name": "RCC Signature Pizza",
+    "category": "Pizzas",
+    "description": "",
+    "price": 900,
+    "options": [
+      {
+        "id": "medium",
+        "label": "Medium",
+        "price": 900
+      },
+      {
+        "id": "large",
+        "label": "Large",
+        "price": 1200
+      }
+    ],
+    "page": 7,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p8-kenyan-tea-pot",
+    "name": "Kenyan Tea Pot",
+    "category": "Tea",
+    "description": "",
+    "price": 350,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 350
+      }
+    ],
+    "page": 8,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p8-kenyan-tea",
+    "name": "Kenyan Tea",
+    "category": "Tea",
+    "description": "",
+    "price": 200,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 200
+      }
+    ],
+    "page": 8,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p8-kenyan-black-tea",
+    "name": "Kenyan Black Tea",
+    "category": "Tea",
+    "description": "",
+    "price": 150,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 150
+      }
+    ],
+    "page": 8,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p8-chai-latte",
+    "name": "Chai Latte",
+    "category": "Tea",
+    "description": "",
+    "price": 300,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 300
+      }
+    ],
+    "page": 8,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p8-morrocan-mint",
+    "name": "Morrocan Mint",
+    "category": "Tea",
+    "description": "",
+    "price": 200,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 200
+      }
+    ],
+    "page": 8,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p8-masala-tea",
+    "name": "Masala Tea",
+    "category": "Tea",
+    "description": "",
+    "price": 250,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 250
+      }
+    ],
+    "page": 8,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p8-masala-black-tea",
+    "name": "Masala Black Tea",
+    "category": "Tea",
+    "description": "",
+    "price": 200,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 200
+      }
+    ],
+    "page": 8,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p8-dawa",
+    "name": "Dawa",
+    "category": "Tea",
+    "description": "",
+    "price": 250,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 250
+      }
+    ],
+    "page": 8,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p8-mug-of-milk",
+    "name": "Mug Of Milk",
+    "category": "Tea",
+    "description": "",
+    "price": 200,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 200
+      }
+    ],
+    "page": 8,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p8-herbal-tea",
+    "name": "Herbal Tea",
+    "category": "Tea",
+    "description": "",
+    "price": 250,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 250
+      }
+    ],
+    "page": 8,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p8-hot-chocolate",
+    "name": "Hot Chocolate",
+    "category": "Tea",
+    "description": "",
+    "price": 300,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 300
+      }
+    ],
+    "page": 8,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p8-turmeric-dawa",
+    "name": "Turmeric Dawa",
+    "category": "Tea",
+    "description": "",
+    "price": 300,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 300
+      }
+    ],
+    "page": 8,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p8-camel-tea",
+    "name": "Camel Tea",
+    "category": "Tea",
+    "description": "",
+    "price": 200,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 200
+      }
+    ],
+    "page": 8,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p8-lemon-tea",
+    "name": "Lemon Tea",
+    "category": "Tea",
+    "description": "",
+    "price": 200,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 200
+      }
+    ],
+    "page": 8,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p8-stormy-chocolate",
+    "name": "Stormy Chocolate",
+    "category": "Tea",
+    "description": "",
+    "price": 350,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 350
+      }
+    ],
+    "page": 8,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p8-hibiscus-tea",
+    "name": "Hibiscus Tea",
+    "category": "Tea",
+    "description": "",
+    "price": 250,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 250
+      }
+    ],
+    "page": 8,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p8-camel-tea-special",
+    "name": "Camel Tea Special",
+    "category": "Tea",
+    "description": "",
+    "price": 250,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 250
+      }
+    ],
+    "page": 8,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p8-english-tea",
+    "name": "English Tea",
+    "category": "Tea",
+    "description": "",
+    "price": 250,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 250
+      }
+    ],
+    "page": 8,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p8-espresso-single",
+    "name": "Espresso Single",
+    "category": "Coffee",
+    "description": "",
+    "price": 150,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 150
+      }
+    ],
+    "page": 8,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p8-expresso-double",
+    "name": "Expresso Double",
+    "category": "Coffee",
+    "description": "",
+    "price": 190,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 190
+      }
+    ],
+    "page": 8,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p8-capuccino-single",
+    "name": "Capuccino Single",
+    "category": "Coffee",
+    "description": "",
+    "price": 250,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 250
+      }
+    ],
+    "page": 8,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p8-capuccino-double",
+    "name": "Capuccino Double",
+    "category": "Coffee",
+    "description": "",
+    "price": 300,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 300
+      }
+    ],
+    "page": 8,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p8-latte-single",
+    "name": "Latte Single",
+    "category": "Coffee",
+    "description": "",
+    "price": 260,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 260
+      }
+    ],
+    "page": 8,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p8-double-latte",
+    "name": "Double Latte",
+    "category": "Coffee",
+    "description": "",
+    "price": 300,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 300
+      }
+    ],
+    "page": 8,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p8-latte-macchiato",
+    "name": "Latte Macchiato",
+    "category": "Coffee",
+    "description": "",
+    "price": 250,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 250
+      }
+    ],
+    "page": 8,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p8-double-latte-160",
+    "name": "Double Latte",
+    "category": "Coffee",
+    "description": "",
+    "price": 300,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 300
+      }
+    ],
+    "page": 8,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p8-espresso-macchiato",
+    "name": "Espresso Macchiato",
+    "category": "Coffee",
+    "description": "",
+    "price": 190,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 190
+      }
+    ],
+    "page": 8,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p8-flat-white",
+    "name": "Flat White",
+    "category": "Coffee",
+    "description": "",
+    "price": 280,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 280
+      }
+    ],
+    "page": 8,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p8-mocha-single",
+    "name": "Mocha Single",
+    "category": "Coffee",
+    "description": "",
+    "price": 300,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 300
+      }
+    ],
+    "page": 8,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p8-mocha-double",
+    "name": "Mocha Double",
+    "category": "Coffee",
+    "description": "",
+    "price": 350,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 350
+      }
+    ],
+    "page": 8,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p8-americano-single",
+    "name": "Americano Single",
+    "category": "Coffee",
+    "description": "",
+    "price": 200,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 200
+      }
+    ],
+    "page": 8,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p8-americano-double",
+    "name": "Americano Double",
+    "category": "Coffee",
+    "description": "",
+    "price": 250,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 250
+      }
+    ],
+    "page": 8,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p8-flavored-latte-double",
+    "name": "Flavored Latte Double",
+    "category": "Coffee",
+    "description": "",
+    "price": 350,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 350
+      }
+    ],
+    "page": 8,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p8-flavored-latte-single",
+    "name": "Flavored Latte Single",
+    "category": "Coffee",
+    "description": "",
+    "price": 300,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 300
+      }
+    ],
+    "page": 8,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p8-spanish-latte-single",
+    "name": "Spanish Latte Single",
+    "category": "Coffee",
+    "description": "",
+    "price": 300,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 300
+      }
+    ],
+    "page": 8,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p8-spanish-latte-double",
+    "name": "Spanish Latte Double",
+    "category": "Coffee",
+    "description": "",
+    "price": 350,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 350
+      }
+    ],
+    "page": 8,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p8-flavored-mocha-single",
+    "name": "Flavored Mocha Single",
+    "category": "Coffee",
+    "description": "",
+    "price": 330,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 330
+      }
+    ],
+    "page": 8,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p8-flavored-mocha-double",
+    "name": "Flavored Mocha Double",
+    "category": "Coffee",
+    "description": "",
+    "price": 370,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 370
+      }
+    ],
+    "page": 8,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p8-filter-coffee",
+    "name": "Filter Coffee",
+    "category": "Coffee",
+    "description": "",
+    "price": 300,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 300
+      }
+    ],
+    "page": 8,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p9-iced-vanilla-latte",
+    "name": "Iced Vanilla Latte",
+    "category": "Iced Coffee/Tea",
+    "description": "",
+    "price": 350,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 350
+      }
+    ],
+    "page": 9,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p9-iced-cappuccino",
+    "name": "Iced Cappuccino",
+    "category": "Iced Coffee/Tea",
+    "description": "",
+    "price": 350,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 350
+      }
+    ],
+    "page": 9,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p9-iced-mocha",
+    "name": "Iced Mocha",
+    "category": "Iced Coffee/Tea",
+    "description": "",
+    "price": 400,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 400
+      }
+    ],
+    "page": 9,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p9-iced-americano",
+    "name": "Iced Americano",
+    "category": "Iced Coffee/Tea",
+    "description": "",
+    "price": 350,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 350
+      }
+    ],
+    "page": 9,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p9-iced-lemon-tea",
+    "name": "Iced Lemon Tea",
+    "category": "Iced Coffee/Tea",
+    "description": "",
+    "price": 270,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 270
+      }
+    ],
+    "page": 9,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p9-passion-iced-tea",
+    "name": "Passion Iced Tea",
+    "category": "Iced Coffee/Tea",
+    "description": "",
+    "price": 350,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 350
+      }
+    ],
+    "page": 9,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p9-blueberry-iced-tea",
+    "name": "Blueberry Iced Tea",
+    "category": "Iced Coffee/Tea",
+    "description": "",
+    "price": 400,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 400
+      }
+    ],
+    "page": 9,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p9-affogato",
+    "name": "Affogato",
+    "category": "Iced Coffee/Tea",
+    "description": "",
+    "price": 400,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 400
+      }
+    ],
+    "page": 9,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p9-iced-spanish-latte",
+    "name": "Iced Spanish Latte",
+    "category": "Iced Coffee/Tea",
+    "description": "",
+    "price": 450,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 450
+      }
+    ],
+    "page": 9,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p9-hot-matcha-latte",
+    "name": "Hot Matcha Latte",
+    "category": "Matcha",
+    "description": "",
+    "price": 350,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 350
+      }
+    ],
+    "page": 9,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p9-iced-vanilla-matcha",
+    "name": "Iced Vanilla Matcha",
+    "category": "Matcha",
+    "description": "",
+    "price": 400,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 400
+      }
+    ],
+    "page": 9,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p9-iced-matcha-lemonade",
+    "name": "Iced Matcha Lemonade",
+    "category": "Matcha",
+    "description": "",
+    "price": 450,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 450
+      }
+    ],
+    "page": 9,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p9-iced-caramel-matcha",
+    "name": "Iced Caramel Matcha",
+    "category": "Matcha",
+    "description": "",
+    "price": 400,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 400
+      }
+    ],
+    "page": 9,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p9-iced-strawberry-matcha",
+    "name": "Iced Strawberry Matcha",
+    "category": "Matcha",
+    "description": "",
+    "price": 400,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 400
+      }
+    ],
+    "page": 9,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p9-iced-blueberry-matcha",
+    "name": "Iced Blueberry Matcha",
+    "category": "Matcha",
+    "description": "",
+    "price": 500,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 500
+      }
+    ],
+    "page": 9,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p9-tea-bag",
+    "name": "Tea Bag",
+    "category": "Extras",
+    "description": "",
+    "price": 30,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 30
+      }
+    ],
+    "page": 9,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p9-honey",
+    "name": "Honey",
+    "category": "Extras",
+    "description": "",
+    "price": 50,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 50
+      }
+    ],
+    "page": 9,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p9-syrup",
+    "name": "Syrup",
+    "category": "Extras",
+    "description": "",
+    "price": 100,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 100
+      }
+    ],
+    "page": 9,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p9-milk",
+    "name": "Milk",
+    "category": "Extras",
+    "description": "",
+    "price": 100,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 100
+      }
+    ],
+    "page": 9,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p9-mango",
+    "name": "Mango",
+    "category": "Juices",
+    "description": "",
+    "price": 300,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 300
+      }
+    ],
+    "page": 9,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p9-orange",
+    "name": "Orange",
+    "category": "Juices",
+    "description": "",
+    "price": 400,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 400
+      }
+    ],
+    "page": 9,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p9-apple",
+    "name": "Apple",
+    "category": "Juices",
+    "description": "",
+    "price": 400,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 400
+      }
+    ],
+    "page": 9,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p9-pineapple",
+    "name": "Pineapple",
+    "category": "Juices",
+    "description": "",
+    "price": 300,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 300
+      }
+    ],
+    "page": 9,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p9-melon",
+    "name": "Melon",
+    "category": "Juices",
+    "description": "",
+    "price": 300,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 300
+      }
+    ],
+    "page": 9,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p9-pineapple-mint",
+    "name": "Pineapple Mint",
+    "category": "Juices",
+    "description": "",
+    "price": 300,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 300
+      }
+    ],
+    "page": 9,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p9-passion",
+    "name": "Passion",
+    "category": "Juices",
+    "description": "",
+    "price": 300,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 300
+      }
+    ],
+    "page": 9,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p9-cocktail",
+    "name": "Cocktail",
+    "category": "Juices",
+    "description": "",
+    "price": 350,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 350
+      }
+    ],
+    "page": 9,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p9-apple-carrot",
+    "name": "Apple Carrot",
+    "category": "Juices",
+    "description": "",
+    "price": 400,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 400
+      }
+    ],
+    "page": 9,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p9-hibiscus-juice",
+    "name": "Hibiscus Juice",
+    "category": "Juices",
+    "description": "",
+    "price": 300,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 300
+      }
+    ],
+    "page": 9,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p9-immunity-booster",
+    "name": "Immunity Booster",
+    "category": "Juices",
+    "description": "",
+    "price": 400,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 400
+      }
+    ],
+    "page": 9,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p10-mango-smoothie",
+    "name": "Mango Smoothie",
+    "category": "Smoothies",
+    "description": "",
+    "price": 400,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 400
+      }
+    ],
+    "page": 10,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p10-banana-booster",
+    "name": "Banana Booster",
+    "category": "Smoothies",
+    "description": "(Banana, peanuts, yorghurt)",
+    "price": 400,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 400
+      }
+    ],
+    "page": 10,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p10-strawberry-smoothie",
+    "name": "Strawberry Smoothie",
+    "category": "Smoothies",
+    "description": "",
+    "price": 400,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 400
+      }
+    ],
+    "page": 10,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p10-blueberry-smoothie",
+    "name": "Blueberry Smoothie",
+    "category": "Smoothies",
+    "description": "",
+    "price": 450,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 450
+      }
+    ],
+    "page": 10,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p10-oat-smoothie",
+    "name": "Oat Smoothie",
+    "category": "Smoothies",
+    "description": "(oats, cornflakes, yorgurt)",
+    "price": 400,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 400
+      }
+    ],
+    "page": 10,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p10-super-green-smoothie",
+    "name": "Super Green Smoothie",
+    "category": "Smoothies",
+    "description": "(Spinach, green apples, celery, ginger, moringa, honey, avocado)",
+    "price": 350,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 350
+      }
+    ],
+    "page": 10,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p10-ultimate-detox",
+    "name": "Ultimate Detox",
+    "category": "Smoothies",
+    "description": "(Carrots, green apples, ginger, lemon)",
+    "price": 350,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 350
+      }
+    ],
+    "page": 10,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p10-classic-lemonade",
+    "name": "Classic Lemonade",
+    "category": "Lemonades",
+    "description": "",
+    "price": 300,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 300
+      }
+    ],
+    "page": 10,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p10-blue-lagoon",
+    "name": "Blue Lagoon",
+    "category": "Lemonades",
+    "description": "",
+    "price": 300,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 300
+      }
+    ],
+    "page": 10,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p10-sunrise",
+    "name": "Sunrise",
+    "category": "Lemonades",
+    "description": "(Orange, pineapple, grenadine syrup, lemon)",
+    "price": 350,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 350
+      }
+    ],
+    "page": 10,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p10-strawberry-lemonade",
+    "name": "Strawberry Lemonade",
+    "category": "Lemonades",
+    "description": "",
+    "price": 399,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 399
+      }
+    ],
+    "page": 10,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p10-kiwi-lemonade",
+    "name": "Kiwi Lemonade",
+    "category": "Lemonades",
+    "description": "",
+    "price": 300,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 300
+      }
+    ],
+    "page": 10,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p10-long-island",
+    "name": "Long Island",
+    "category": "Lemonades",
+    "description": "(Orange, coke, lemon)",
+    "price": 300,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 300
+      }
+    ],
+    "page": 10,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p10-pinacolada",
+    "name": "Pinacolada",
+    "category": "Lemonades",
+    "description": "(Pineapple, coconut milk, lemon, simple syrup)",
+    "price": 350,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 350
+      }
+    ],
+    "page": 10,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p10-kiwi-mojito",
+    "name": "Kiwi Mojito",
+    "category": "Mojito",
+    "description": "",
+    "price": 350,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 350
+      }
+    ],
+    "page": 10,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p10-blueberry-mojito",
+    "name": "Blueberry Mojito",
+    "category": "Mojito",
+    "description": "",
+    "price": 400,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 400
+      }
+    ],
+    "page": 10,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p10-passion-mojito",
+    "name": "Passion Mojito",
+    "category": "Mojito",
+    "description": "",
+    "price": 350,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 350
+      }
+    ],
+    "page": 10,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p10-raspberry-mojito",
+    "name": "Raspberry Mojito",
+    "category": "Mojito",
+    "description": "",
+    "price": 350,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 350
+      }
+    ],
+    "page": 10,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p10-virgin-mojito",
+    "name": "Virgin Mojito",
+    "category": "Mojito",
+    "description": "",
+    "price": 350,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 350
+      }
+    ],
+    "page": 10,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p10-pineapple-mojito",
+    "name": "Pineapple Mojito",
+    "category": "Mojito",
+    "description": "",
+    "price": 350,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 350
+      }
+    ],
+    "page": 10,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p10-vanilla-shake",
+    "name": "Vanilla Shake",
+    "category": "Shakes",
+    "description": "",
+    "price": 400,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 400
+      }
+    ],
+    "page": 10,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p10-chocolate-shake",
+    "name": "Chocolate Shake",
+    "category": "Shakes",
+    "description": "",
+    "price": 400,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 400
+      }
+    ],
+    "page": 10,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p10-strawberry-shake",
+    "name": "Strawberry Shake",
+    "category": "Shakes",
+    "description": "",
+    "price": 400,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 400
+      }
+    ],
+    "page": 10,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p10-mint-chocolate-shake",
+    "name": "Mint Chocolate Shake",
+    "category": "Shakes",
+    "description": "",
+    "price": 450,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 450
+      }
+    ],
+    "page": 10,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p10-mango-shake",
+    "name": "Mango Shake",
+    "category": "Shakes",
+    "description": "",
+    "price": 400,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 400
+      }
+    ],
+    "page": 10,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p10-blue-berry-shake",
+    "name": "Blue Berry Shake",
+    "category": "Shakes",
+    "description": "",
+    "price": 450,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 450
+      }
+    ],
+    "page": 10,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p10-raspberry",
+    "name": "Raspberry",
+    "category": "Shakes",
+    "description": "",
+    "price": 400,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 400
+      }
+    ],
+    "page": 10,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p10-espresso-shake",
+    "name": "Espresso Shake",
+    "category": "Shakes",
+    "description": "",
+    "price": 450,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 450
+      }
+    ],
+    "page": 10,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p10-matcha-shake",
+    "name": "Matcha Shake",
+    "category": "Shakes",
+    "description": "",
+    "price": 500,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 500
+      }
+    ],
+    "page": 10,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p10-nutty-caramel",
+    "name": "Nutty Caramel",
+    "category": "Shakes",
+    "description": "",
+    "price": 450,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 450
+      }
+    ],
+    "page": 10,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p11-water-500ml",
+    "name": "Water 500Ml",
+    "category": "Water/Soda",
+    "description": "",
+    "price": 80,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 80
+      }
+    ],
+    "page": 11,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p11-water-1000ml",
+    "name": "Water 1000Ml",
+    "category": "Water/Soda",
+    "description": "",
+    "price": 150,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 150
+      }
+    ],
+    "page": 11,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p11-soda-300ml",
+    "name": "Soda 300Ml",
+    "category": "Water/Soda",
+    "description": "",
+    "price": 100,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 100
+      }
+    ],
+    "page": 11,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p11-sparkling-500ml",
+    "name": "Sparkling 500Ml",
+    "category": "Water/Soda",
+    "description": "",
+    "price": 150,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 150
+      }
+    ],
+    "page": 11,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p11-sparkling-1-000ml",
+    "name": "Sparkling 1,000Ml",
+    "category": "Water/Soda",
+    "description": "",
+    "price": 250,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 250
+      }
+    ],
+    "page": 11,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p11-keringet-500ml",
+    "name": "Keringet 500Ml",
+    "category": "Water/Soda",
+    "description": "",
+    "price": 100,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 100
+      }
+    ],
+    "page": 11,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p11-keringet-1-000ml",
+    "name": "Keringet 1,000Ml",
+    "category": "Water/Soda",
+    "description": "",
+    "price": 200,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 200
+      }
+    ],
+    "page": 11,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p12-black-forest-slice",
+    "name": "Black Forest Slice",
+    "category": "Cakes",
+    "description": "",
+    "price": 800,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 800
+      }
+    ],
+    "page": 12,
+    "available": true,
+    "needsReview": true
+  },
+  {
+    "id": "p12-oreo-slice",
+    "name": "Oreo Slice",
+    "category": "Cakes",
+    "description": "",
+    "price": 800,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 800
+      }
+    ],
+    "page": 12,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p12-white-forest-slice",
+    "name": "White Forest Slice",
+    "category": "Cakes",
+    "description": "",
+    "price": 800,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 800
+      }
+    ],
+    "page": 12,
+    "available": true,
+    "needsReview": true
+  },
+  {
+    "id": "p12-chocolate-slice",
+    "name": "Chocolate Slice",
+    "category": "Cakes",
+    "description": "",
+    "price": 800,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 800
+      }
+    ],
+    "page": 12,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p12-orange-slice",
+    "name": "Orange Slice",
+    "category": "Cakes",
+    "description": "",
+    "price": 800,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 800
+      }
+    ],
+    "page": 12,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p12-biscoff",
+    "name": "Biscoff",
+    "category": "Cakes",
+    "description": "",
+    "price": 900,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 900
+      }
+    ],
+    "page": 12,
+    "available": true,
+    "needsReview": true
+  },
+  {
+    "id": "p12-muffin-per-piece",
+    "name": "Muffin (Per Piece)",
+    "category": "Cakes",
+    "description": "",
+    "price": 150,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 150
+      }
+    ],
+    "page": 12,
+    "available": true,
+    "needsReview": true
+  },
+  {
+    "id": "p12-biscoff-caramel-slice-per-piece",
+    "name": "Biscoff Caramel Slice (Per Piece)",
+    "category": "Desserts",
+    "description": "",
+    "price": 1200,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 1200
+      }
+    ],
+    "page": 12,
+    "available": true,
+    "needsReview": true
+  },
+  {
+    "id": "p12-tiramisu-per-piece",
+    "name": "Tiramisu (Per Piece)",
+    "category": "Desserts",
+    "description": "",
+    "price": 1200,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 1200
+      }
+    ],
+    "page": 12,
+    "available": true,
+    "needsReview": true
+  },
+  {
+    "id": "p12-croisants-plain",
+    "name": "Croisants Plain",
+    "category": "Pastries",
+    "description": "",
+    "price": 250,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 250
+      }
+    ],
+    "page": 12,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p12-chicken-pie",
+    "name": "Chicken Pie",
+    "category": "Pastries",
+    "description": "",
+    "price": 250,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 250
+      }
+    ],
+    "page": 12,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p12-meat-pie",
+    "name": "Meat Pie",
+    "category": "Pastries",
+    "description": "",
+    "price": 250,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 250
+      }
+    ],
+    "page": 12,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p12-sausage-rolls",
+    "name": "Sausage Rolls",
+    "category": "Pastries",
+    "description": "",
+    "price": 300,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 300
+      }
+    ],
+    "page": 12,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p12-donuts-plain",
+    "name": "Donuts Plain",
+    "category": "Pastries",
+    "description": "",
+    "price": 100,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 100
+      }
+    ],
+    "page": 12,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p12-chocolate-donut",
+    "name": "Chocolate Donut",
+    "category": "Pastries",
+    "description": "",
+    "price": 200,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 200
+      }
+    ],
+    "page": 12,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p12-muffins",
+    "name": "Muffins",
+    "category": "Pastries",
+    "description": "",
+    "price": 200,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 200
+      }
+    ],
+    "page": 12,
+    "available": true,
+    "needsReview": true
+  },
+  {
+    "id": "p12-lava-cake",
+    "name": "Lava Cake",
+    "category": "Deserts",
+    "description": "",
+    "price": 900,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 900
+      }
+    ],
+    "page": 12,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p12-tiramisu",
+    "name": "Tiramisu",
+    "category": "Deserts",
+    "description": "",
+    "price": 900,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 900
+      }
+    ],
+    "page": 12,
+    "available": true,
+    "needsReview": true
+  },
+  {
+    "id": "p12-biscoff-259",
+    "name": "Biscoff",
+    "category": "Deserts",
+    "description": "",
+    "price": 1000,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 1000
+      }
+    ],
+    "page": 12,
+    "available": true,
+    "needsReview": true
+  },
+  {
+    "id": "p12-black-forest",
+    "name": "Black Forest",
+    "category": "Cakes Slices",
+    "description": "",
+    "price": 400,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 400
+      }
+    ],
+    "page": 12,
+    "available": true,
+    "needsReview": true
+  },
+  {
+    "id": "p12-red-velvet",
+    "name": "Red Velvet",
+    "category": "Cakes Slices",
+    "description": "",
+    "price": 400,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 400
+      }
+    ],
+    "page": 12,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p12-blueberry",
+    "name": "Blueberry",
+    "category": "Cakes Slices",
+    "description": "",
+    "price": 400,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 400
+      }
+    ],
+    "page": 12,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p12-chocolate-orange",
+    "name": "Chocolate Orange",
+    "category": "Cakes Slices",
+    "description": "",
+    "price": 400,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 400
+      }
+    ],
+    "page": 12,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p12-white-forest",
+    "name": "White Forest",
+    "category": "Cakes Slices",
+    "description": "",
+    "price": 400,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 400
+      }
+    ],
+    "page": 12,
+    "available": true,
+    "needsReview": true
+  },
+  {
+    "id": "p12-carrot-bread",
+    "name": "Carrot Bread",
+    "category": "Cakes Slices",
+    "description": "",
+    "price": 300,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 300
+      }
+    ],
+    "page": 12,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p12-banana-bread",
+    "name": "Banana Bread",
+    "category": "Cakes Slices",
+    "description": "",
+    "price": 300,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 300
+      }
+    ],
+    "page": 12,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p12-marble-cake",
+    "name": "Marble Cake",
+    "category": "Cakes Slices",
+    "description": "",
+    "price": 350,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 350
+      }
+    ],
+    "page": 12,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p12-vanilla-cake",
+    "name": "Vanilla Cake",
+    "category": "Cakes Slices",
+    "description": "",
+    "price": 350,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 350
+      }
+    ],
+    "page": 12,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p13-blue-berry-1-kg",
+    "name": "Blue Berry 1 Kg",
+    "category": "Occasional Cakes",
+    "description": "",
+    "price": 2000,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 2000
+      }
+    ],
+    "page": 13,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p13-black-forest-1-kg",
+    "name": "Black Forest 1 Kg",
+    "category": "Occasional Cakes",
+    "description": "",
+    "price": 2000,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 2000
+      }
+    ],
+    "page": 13,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p13-white-forest-1-kg",
+    "name": "White Forest 1 Kg",
+    "category": "Occasional Cakes",
+    "description": "",
+    "price": 2000,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 2000
+      }
+    ],
+    "page": 13,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p13-red-velvet-1-kg",
+    "name": "Red Velvet 1 Kg",
+    "category": "Occasional Cakes",
+    "description": "",
+    "price": 2000,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 2000
+      }
+    ],
+    "page": 13,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p13-chocolate-orange-1-kg",
+    "name": "Chocolate Orange 1 Kg",
+    "category": "Occasional Cakes",
+    "description": "",
+    "price": 2500,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 2500
+      }
+    ],
+    "page": 13,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p13-blue-berry-2-kg",
+    "name": "Blue Berry 2 Kg",
+    "category": "Occasional Cakes",
+    "description": "",
+    "price": 3500,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 3500
+      }
+    ],
+    "page": 13,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p13-black-forest-2-kg",
+    "name": "Black Forest 2 Kg",
+    "category": "Occasional Cakes",
+    "description": "",
+    "price": 3500,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 3500
+      }
+    ],
+    "page": 13,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p13-white-forest-2-kg",
+    "name": "White Forest 2 Kg",
+    "category": "Occasional Cakes",
+    "description": "",
+    "price": 3500,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 3500
+      }
+    ],
+    "page": 13,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p13-red-velvet-2-kg",
+    "name": "Red Velvet 2 Kg",
+    "category": "Occasional Cakes",
+    "description": "",
+    "price": 3500,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 3500
+      }
+    ],
+    "page": 13,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p13-chocolate-orange-2-kg",
+    "name": "Chocolate Orange 2 Kg",
+    "category": "Occasional Cakes",
+    "description": "",
+    "price": 4000,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 4000
+      }
+    ],
+    "page": 13,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p14-chicken-tacos",
+    "name": "Chicken Tacos",
+    "category": "Wraps",
+    "description": "",
+    "price": 600,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 600
+      }
+    ],
+    "page": 14,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p14-beef-tacos",
+    "name": "Beef Tacos",
+    "category": "Wraps",
+    "description": "",
+    "price": 500,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 500
+      }
+    ],
+    "page": 14,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p14-shawarma-chicken",
+    "name": "Shawarma Chicken",
+    "category": "Wraps",
+    "description": "",
+    "price": 500,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 500
+      }
+    ],
+    "page": 14,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p14-chicken-nuggets",
+    "name": "Chicken Nuggets",
+    "category": "Wraps",
+    "description": "",
+    "price": 500,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 500
+      }
+    ],
+    "page": 14,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p14-crispy-chicken",
+    "name": "Crispy Chicken",
+    "category": "Wraps",
+    "description": "",
+    "price": 500,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 500
+      }
+    ],
+    "page": 14,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p14-chapati-rolls",
+    "name": "Chapati Rolls",
+    "category": "Wraps",
+    "description": "",
+    "price": 350,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 350
+      }
+    ],
+    "page": 14,
+    "available": true,
+    "needsReview": true
+  },
+  {
+    "id": "p14-chapati-rolex",
+    "name": "Chapati Rolex",
+    "category": "Wraps",
+    "description": "",
+    "price": 250,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 250
+      }
+    ],
+    "page": 14,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p14-bbq-chicken-wings",
+    "name": "BBQ Chicken Wings",
+    "category": "Chicken Meals",
+    "description": "",
+    "price": 600,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 600
+      }
+    ],
+    "page": 14,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p14-buffalo-chicken-wings",
+    "name": "Buffalo Chicken Wings",
+    "category": "Chicken Meals",
+    "description": "",
+    "price": 600,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 600
+      }
+    ],
+    "page": 14,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p14-kfc-chicken-3pcs",
+    "name": "KFC Chicken 3Pcs",
+    "category": "Chicken Meals",
+    "description": "",
+    "price": 700,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 700
+      }
+    ],
+    "page": 14,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p14-quarter-chicken",
+    "name": "Quarter Chicken",
+    "category": "Chicken Meals",
+    "description": "",
+    "price": 300,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 300
+      }
+    ],
+    "page": 14,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p14-half-chicken",
+    "name": "Half Chicken",
+    "category": "Chicken Meals",
+    "description": "",
+    "price": 600,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 600
+      }
+    ],
+    "page": 14,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p14-french-fries",
+    "name": "French Fries",
+    "category": "Fries",
+    "description": "",
+    "price": 200,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 200
+      }
+    ],
+    "page": 14,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p14-masala-chips",
+    "name": "Masala Chips",
+    "category": "Fries",
+    "description": "",
+    "price": 300,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 300
+      }
+    ],
+    "page": 14,
+    "available": true,
+    "needsReview": true
+  },
+  {
+    "id": "p14-garlic-chips",
+    "name": "Garlic Chips",
+    "category": "Fries",
+    "description": "",
+    "price": 300,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 300
+      }
+    ],
+    "page": 14,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p14-pousin-chips",
+    "name": "Pousin Chips",
+    "category": "Fries",
+    "description": "",
+    "price": 250,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 250
+      }
+    ],
+    "page": 14,
+    "available": true,
+    "needsReview": true
+  },
+  {
+    "id": "p14-loaded-fries",
+    "name": "Loaded Fries",
+    "category": "Fries",
+    "description": "",
+    "price": 800,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 800
+      }
+    ],
+    "page": 14,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p14-sausage-chicken-beef",
+    "name": "Sausage Chicken / Beef",
+    "category": "Extras",
+    "description": "",
+    "price": 100,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 100
+      }
+    ],
+    "page": 14,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p14-samosa-chicken-fish",
+    "name": "Samosa Chicken / Fish",
+    "category": "Extras",
+    "description": "",
+    "price": 80,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 80
+      }
+    ],
+    "page": 14,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p14-beef-kebabs",
+    "name": "Beef Kebabs",
+    "category": "Extras",
+    "description": "",
+    "price": 250,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 250
+      }
+    ],
+    "page": 14,
+    "available": true,
+    "needsReview": false
+  },
+  {
+    "id": "p14-mahamri-2pcs",
+    "name": "Mahamri 2Pcs",
+    "category": "Extras",
+    "description": "",
+    "price": 50,
+    "options": [
+      {
+        "id": "regular",
+        "label": "Regular",
+        "price": 50
+      }
+    ],
+    "page": 14,
+    "available": true,
+    "needsReview": false
+  }
+]
