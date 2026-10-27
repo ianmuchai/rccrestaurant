@@ -38,3 +38,4 @@
 - Completed the GitHub connection through the signed-in dashboard. Push aca3821 triggered a successful automatic production build and deployment (59da2581).
 - Replaced integer-rounded video crops with fractional affine sampling at 60 fps. Both rendered-motion checks, 27 app tests, TypeScript and production build pass. Verified new clips, carousel transitions and public/staff endpoints on the live site.
 - Attached rcc.co.ke and www.rcc.co.ke to the Worker after the conflicting imported Cloudflare records were removed. Registry delegation still lists HostAfrica; requested the registrar sign-in needed to inspect the replacement failure.
+- After the user signed in, changed HostAfrica's actual registrar setting from Default to Custom with only the assigned Cloudflare pair. Reloaded and confirmed persistence. Registry publication remains pending immediately after saving; requested Cloudflare's Check nameservers now action.

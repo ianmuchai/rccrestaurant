@@ -4,7 +4,7 @@ A restaurant website and installable PWA with a full-screen video carousel, cate
 
 Published preview: https://rcc-restaurant.rcc-kitengela.workers.dev
 
-The Worker and production D1 database are deployed. GitHub Builds is connected to `main`. Changing registrar nameservers, configuring staff access and enabling verified M-Pesa remain account setup steps. See [DNS_STATUS.md](DNS_STATUS.md) for the domain check.
+The Worker and production D1 database are deployed. GitHub Builds is connected to `main`. HostAfrica now has the correct Cloudflare nameservers saved; domain activation is pending registry publication and DNS propagation. Configuring staff access and enabling verified M-Pesa remain account setup steps. See [DNS_STATUS.md](DNS_STATUS.md) for the domain check.
 
 ## Deploy from GitHub to Cloudflare
 
