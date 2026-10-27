@@ -2,6 +2,10 @@
 
 A restaurant website and installable PWA with a full-screen video carousel, categorized food menu, shared cart, pickup/delivery checkout, a staff dashboard, and an M-Pesa integration.
 
+Published preview: https://rcc-restaurant.rcc-kitengela.workers.dev
+
+The Worker and production D1 database are deployed. Connecting GitHub Builds, changing registrar nameservers, configuring staff access and enabling verified M-Pesa remain account setup steps. See [DNS_STATUS.md](DNS_STATUS.md) for the domain check.
+
 ## Deploy from GitHub to Cloudflare
 
 Connect this repository to **Cloudflare Workers Builds** with:

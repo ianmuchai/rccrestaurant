@@ -11,9 +11,9 @@
 - [x] Add deployment configuration validation and tests for missing/invalid/real D1 IDs and migration failure preventing publication.
 - [x] Add verified Cloudflare Access staff authentication with tests for forged headers, missing configuration, invalid JWT signature/issuer/audience/expiry, and email allowlisting.
 - [x] Add deployment and CI scripts and a concise account setup guide. Preserve local-only preview support.
-- [ ] Run unit tests, type checks, production build, local preview checks, deployment dry-run, and scan outgoing source/history for secrets.
-- [ ] Obtain an independent review, fix material findings, commit current app and deployment work, then push to the provided repository without force.
-- [ ] Verify the remote commit and report exact remaining Cloudflare account actions.
+- [x] Run unit tests, type checks, production build, local preview checks, deployment dry-run, and scan outgoing source/history for secrets.
+- [x] Obtain an independent review, fix material findings, commit current app and deployment work, then push to the provided repository without force.
+- [x] Verify the remote commit and report exact remaining Cloudflare account actions.
 
 ## Review focus
 
@@ -32,3 +32,6 @@
 - Cloudflare OAuth succeeded. Created rcc-db (no existing databases) and recorded its non-secret identifiers in cloudflare.project.json.
 - 27 tests pass, TypeScript passes, production build and deploy dry-run pass. Independent review found a legacy staff sign-in link; replaced it with /admin for Access session recovery.
 - The .ke parent delegation still uses only HostAfrica nameservers; DNS_STATUS.md records the check and required registrar action.
+- User explicitly approved publishing source and brand assets to the public repository. GitHub main received 7d4436e; its Check RCC workflow passed.
+- Applied both migrations to rcc-db and deployed the Worker at https://rcc-restaurant.rcc-kitengela.workers.dev. HTTPS pages, catalog and configuration returned 200 after initial certificate provisioning.
+- Cloudflare zone remains Pending. The OAuth login does not include Workers Builds configuration permission; requested the one-time dashboard GitHub connection from the user. Payments and fulfillment remain disabled pending verified merchant and restaurant settings.
