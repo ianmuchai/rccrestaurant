@@ -24,6 +24,8 @@ The old HostAfrica authoritative zone returned all six nameservers. Public resol
 
 In the registrar's **Manage Nameservers** section, replace the four HostAfrica entries with only the assigned Cloudflare pair. Adding NS records in a DNS record editor is not the same operation. Save, reopen the nameserver settings, and confirm the pair remains saved. If it fails, ask the registrar to update the registry delegation.
 
-After the registry reports the Cloudflare pair, allow resolver caches to expire and check Cloudflare's zone status. When Active, attach `rcc.co.ke` to the deployed RCC Worker as a Custom Domain. Do not point it to the local `127.0.0.1` address. Preserve any required email DNS records when moving the zone.
+After the registry reports the Cloudflare pair, allow resolver caches to expire and check Cloudflare's zone status. Both `rcc.co.ke` and `www.rcc.co.ke` are now attached to the deployed RCC Worker as Custom Domains. Do not point them to the local `127.0.0.1` address. Preserve any required email DNS records when moving the zone.
 
-No registrar DNS settings or nameservers were changed by this deployment preparation. These are point-in-time findings and should be rechecked after the registrar update.
+No registrar nameservers were changed by the deployment work. Cloudflare's imported four HostAfrica NS records and the two obsolete website A records were removed during setup; the other five imported records were preserved. Cloudflare then successfully attached both official hostnames to the RCC Worker. These Cloudflare changes do not update registry delegation.
+
+The subsequent direct registry check still returned the old four nameservers. HostAfrica's domain-management window requires a sign-in before its registrar settings can be inspected. The nameserver replacement must be saved at the registrar before waiting for propagation will help.

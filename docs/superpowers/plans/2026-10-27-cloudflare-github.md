@@ -35,3 +35,6 @@
 - User explicitly approved publishing source and brand assets to the public repository. GitHub main received 7d4436e; its Check RCC workflow passed.
 - Applied both migrations to rcc-db and deployed the Worker at https://rcc-restaurant.rcc-kitengela.workers.dev. HTTPS pages, catalog and configuration returned 200 after initial certificate provisioning.
 - Cloudflare zone remains Pending. The OAuth login does not include Workers Builds configuration permission; requested the one-time dashboard GitHub connection from the user. Payments and fulfillment remain disabled pending verified merchant and restaurant settings.
+- Completed the GitHub connection through the signed-in dashboard. Push aca3821 triggered a successful automatic production build and deployment (59da2581).
+- Replaced integer-rounded video crops with fractional affine sampling at 60 fps. Both rendered-motion checks, 27 app tests, TypeScript and production build pass. Verified new clips, carousel transitions and public/staff endpoints on the live site.
+- Attached rcc.co.ke and www.rcc.co.ke to the Worker after the conflicting imported Cloudflare records were removed. Registry delegation still lists HostAfrica; requested the registrar sign-in needed to inspect the replacement failure.

@@ -21,7 +21,7 @@ Repository: https://github.com/ianmuchai/rccrestaurant
 The deployment command applies outstanding D1 migrations before publishing. It refuses to publish with the local placeholder database or after a migration failure. If the build token lacks D1 access, grant **D1 Edit** for the account in the Workers Builds token settings. Keep API tokens in Cloudflare's secret/build-token settings, never in GitHub source.
 
 4. Deploy and open the returned `workers.dev` address. Check `/`, `/menu`, `/moments`, `/visit`, and `/api/catalog`.
-5. When the domain is Active in Cloudflare, add **rcc.co.ke** under **Worker > Settings > Domains & Routes > Add Custom Domain**. Add `www.rcc.co.ke` if required.
+5. **rcc.co.ke** and **www.rcc.co.ke** are already attached as Worker Custom Domains. Complete the registrar-level nameserver replacement described in `DNS_STATUS.md`, then check Cloudflare's activation and HTTPS certificate status. No further website rebuild is needed just to activate the domain.
 
 This repository does not automatically transfer domain registration, change nameservers, subscribe to paid plans, or turn on real payments. Set any custom build preview deployment command to `npx wrangler versions upload --config dist/server/wrangler.json`; do not apply production migrations from untrusted pull requests. Use a separate database/Worker for staging.
 
