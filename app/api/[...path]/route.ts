@@ -93,7 +93,7 @@ async function handle(request:Request) {
   return json({ResultCode:0,ResultDesc:'Accepted'});
  }
  if(path.startsWith('staff/')){
-  const actor=requireStaff(request);if(method!=='GET')sameOrigin(request);
+  const actor=await requireStaff(request);if(method!=='GET')sameOrigin(request);
   if(path==='staff/overview'&&method==='GET'){
    const orders=await database().prepare('SELECT * FROM orders ORDER BY created DESC LIMIT 100').all();
    return json({orders:orders.results,items:await catalog(),settings:await settings(),paymentReady:paymentReady(secrets())});

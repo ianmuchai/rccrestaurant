@@ -1,6 +1,7 @@
 import { env } from 'cloudflare:workers';
 import baseCatalog from './catalog.json';
-import { defaultSettings,canStaff, type MenuItem,type Settings } from './order';
+import { defaultSettings, type MenuItem,type Settings } from './order';
+import {authenticateStaff} from './staff-auth';
 export const secrets=()=>env as unknown as Record<string,any>;
 export function database():D1Database {
  const db=secrets().DB;if(!db)throw new Error('Order storage is not connected yet.');return db;
@@ -14,10 +15,10 @@ export async function settings():Promise<Settings> {
  const row=await database().prepare("SELECT value FROM settings WHERE key='restaurant'").first<{value:string}>();
  return row?{...defaultSettings,...JSON.parse(row.value)}:defaultSettings;
 }
-export function requireStaff(request:Request) {
- const id=request.headers.get('oai-authenticated-user-id');
- if(!canStaff(id,secrets().STAFF_USER_IDS||''))throw new HttpError(403,'Staff access is not configured for this account.');
- return id!;
+export async function requireStaff(request:Request) {
+ const identity=await authenticateStaff(request,secrets());
+ if(!identity)throw new HttpError(403,'Staff access requires a verified Cloudflare Access login.');
+ return identity;
 }
 export class HttpError extends Error {status:number;constructor(status:number,message:string){super(message);this.status=status;}}
 export const json=(v:unknown,status=200)=>Response.json(v,{status,headers:{'Cache-Control':'no-store','X-Content-Type-Options':'nosniff','Referrer-Policy':'same-origin'}});

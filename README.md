@@ -1,78 +1,65 @@
-# RCC Restaurant · Kitengela
+# RCC Restaurant, Kitengela
 
-A full-stack restaurant PWA with four public pages, a muted inline video carousel, smaller non-italic typography, 85 supplied Drive photographs, a category-based menu, shared cart, delivery maps, M-Pesa integration and a protected staff studio.
+A restaurant website and installable PWA with a full-screen video carousel, categorized food menu, shared cart, pickup/delivery checkout, a staff dashboard, and an M-Pesa integration.
 
-## Run locally
+## Deploy from GitHub to Cloudflare
 
-Requires Node 22.13 or newer. Dependencies are locked in `package-lock.json`.
+Connect this repository to **Cloudflare Workers Builds** with:
+
+| Setting | Value |
+| --- | --- |
+| Worker name | `rcc-restaurant` |
+| Production branch | `main` |
+| Root directory | Repository root |
+| Build command | `npm run build` |
+| Deploy command | `npm run deploy` |
+| Node version | `24` |
+
+The D1 database is configured in `cloudflare.project.json`. Its IDs are not credentials. Deployment applies pending database migrations, then publishes the Worker; migration failures stop publication. Existing settings and secrets are retained.
+
+See [CLOUDFLARE.md](CLOUDFLARE.md) for domain setup, build-token permissions, secure staff login, payment configuration and updates.
+
+**Live-order launch requirements:** configure Cloudflare Access for staff, restaurant fulfillment settings and verified M-Pesa credentials. Staff APIs deny access until configured. Pickup/delivery start disabled. Missing payment configuration keeps charging disabled.
+
+## Local development
+
+Use Node 24 and the locked dependencies:
 
 ```sh
 npm ci
 npm test
 npm run typecheck
 npm run build
+npm start
 ```
 
-If Windows blocks `npm.ps1`, use `npm.cmd` or invoke the installed `npm-cli.js` with Node. In this environment the Sites helper's Windows npm shim also failed, so the verified direct build command is `node scripts/build-rcc.mjs`.
+On Windows, use `npm.cmd` if PowerShell blocks `npm.ps1`. Initialize local D1 tables with `npx wrangler d1 migrations apply DB --local --config dist/server/wrangler.json` before the first preview. `npm start` uses local D1 storage; production data is not copied into the checkout.
 
-Build once, then apply each SQL migration in `drizzle/` exactly once to local D1:
+## Website
 
-```sh
-node --import ./scripts/sites-env.mjs ./node_modules/wrangler/bin/wrangler.js d1 execute DB --local --config dist/server/wrangler.json --persist-to .wrangler/state --file drizzle/0000_lonely_microchip.sql
-node --import ./scripts/sites-env.mjs ./node_modules/wrangler/bin/wrangler.js d1 execute DB --local --config dist/server/wrangler.json --persist-to .wrangler/state --file drizzle/0001_hesitant_skin.sql
-npm run dev
-```
+- Four public pages: `/`, `/menu`, `/moments`, `/visit`.
+- 300 original menu entries under 37 categories; unresolved source-price conflicts remain blocked.
+- Meal-specific matching of supplied RCC photographs; unphotographed meals use labeled placeholders.
+- Three muted MP4 photo-motion clips, without narration or playback controls, with overlapping fades. These are animated supplied photographs, not filmed footage. Reduced-motion and data-saving preferences use still images.
+- Responsive menu, category picker, cart persistence, delivery pins and downloadable PWA.
+- Public-page offline browsing. Staff, personal-order and payment responses are excluded from the service-worker cache.
 
-The portable preview runs at the printed loopback URL. `npm start` previews the production Worker locally; it does not publish. Production previews support service-worker testing; development deliberately skips automatic registration.
+## Staff and payments
 
-## Staff and business configuration
+Cloudflare Access tokens are verified for signature, issuer, audience, expiration and an explicit email allowlist. Browser-supplied identity headers are not authentication. Protect both `/admin` and `/api/staff/*` in Access; leave customer pages and the payment callback public.
 
-The staff studio is `/admin`. All staff APIs enforce the authenticated Sites user ID against the server-side `STAFF_USER_IDS` comma-separated allowlist. An empty allowlist denies everyone. Site ownership or being signed in does not automatically grant staff access. Set verified staff user IDs as runtime secrets. Do not allow user-supplied identity headers through a custom proxy; Sites owns and sanitizes those headers.
+All order totals are recalculated server-side. Price changes, unavailable items and unresolved-price items are checked before payment. M-Pesa success requires provider reconciliation and matching receipt, amount, phone and active attempt. Unknown payment outcomes must be reconciled before retrying. Paid cancellations do not automatically issue refunds.
 
-For portable local development only, the supplied sign-in helper uses `local_seedy` at `/signin-with-chatgpt?return_to=/admin`. To exercise staff editing locally, put `STAFF_USER_IDS=local_seedy` in an ignored `.dev.vars` file. Never use development identity simulation as production authentication.
+Configure runtime values from `.env.example` in Cloudflare. Never commit real credentials, customer data or `.dev.vars` files. Live Daraja testing remains a prerequisite to accepting payments.
 
-Staff can set real contact details, hours, pickup instructions, an exact restaurant map pin, pickup/delivery availability and approved delivery zones/fees. Both fulfillment methods start disabled until configured. Menu editing supports option prices, availability and resolving source-price conflicts. Order status changes require verified payment, except cancellation. Paid cancellations do not issue automatic refunds.
+## Maps and assets
 
-## M-Pesa
+The location picker uses bundled Leaflet 1.9.4 with OpenStreetMap tiles and attribution. Browser geolocation and manual coordinates are supported. Google Maps handoff uses universal URLs and requires no Google Maps API key.
 
-Configure the names listed in `.env.example` as server runtime secrets through hosting settings. Never commit or paste real values into chat. Local Worker secrets can use ignored `.dev.vars` files. Required values include Daraja consumer credentials, shortcode, passkey, environment, public HTTPS site URL and a random callback secret of at least 32 characters. Select the transaction type supported by the merchant account.
+The menu and logo originate from supplied PDFs. Photo provenance is retained in `lib/photo-provenance.json`; font and library licenses are in `docs/licenses` and vendor files. An older AI-generated illustrative mandi asset remains in the asset collection; the current carousel uses supplied RCC photos.
 
-1. Connect an approved Safaricom Daraja sandbox app securely.
-2. Configure verified fulfillment settings and resolve price conflicts.
-3. Verify STK initiation, callback delivery, authenticated query reconciliation, cancellation and timeout paths with the provider sandbox.
-4. Configure production credentials only after merchant approval and successful provider testing.
-5. Publish to the intended public audience and verify Safaricom can reach `/api/mpesa/callback` without an interactive authentication screen. The initial private Sites review deployment is not a live customer-payment launch.
+Original menu reimport and photo preparation scripts are documented in `scripts`; they are not required to build or deploy the website. Browser QA scripts that depend on this workstation's sibling `qa-tools` directory are local review helpers, not deployment prerequisites.
 
-Checkout calculates totals server-side and rejects stale client quotes before charging. Payment initiation uses an atomic order lock; failure callbacks update only their active attempt. Authenticated callback events are persisted before provider querying and retried through bounded authenticated order polling. A timeout of STK initiation stays uncertain to avoid a duplicate charge. A missing callback cannot be replaced by trusting a browser or inventing a receipt: staff must reconcile through the merchant portal. A pending request is never displayed as paid.
+## Checks
 
-M-Pesa configuration is currently absent. No real money has been charged; end-to-end Daraja testing remains a launch dependency. A private deployment will also need a supported externally reachable callback configuration before live payments.
-
-Official API: https://developer.safaricom.co.ke/apis/MpesaExpressSimulate
-
-## Menu and assets
-
-`lib/catalog.json` contains 300 entries imported from all 14 pages of the supplied menu, including 37 categories, pizza sizes and occasional-cake weights. Items retain source page provenance. Nineteen apparent price conflicts are blocked until reviewed by staff. The original menu is available as an image-optimized PDF with content retained. `scripts/import-menu.py` documents extraction; reimporting regenerates source data, so review before replacing an edited catalog.
-
-The RCC logo and food photographs are extracted from supplied PDFs. The main mandi poster is AI-generated illustrative artwork, not a claim about a photographed RCC dish. Food imagery is labeled illustrative on the website. Built-in image generation was used with this prompt: “Cinematic premium food photograph for an RCC website: roasted goat mandi and golden spiced rice on dark ceramic, burgundy stone and crimson linen, warm raking light, right-weighted feast and dark left negative space. No people, interiors, logos, words or watermark.” Master artwork is `artwork/mandi-poster.png`; optimized website asset is `public/assets/mandi-poster.webp`.
-
-The latest revision uses three MP4 photo-motion clips made from RCC?s supplied images, with no narration or playback controls. Reduced motion and data-saving preferences show still photos. These are animated photographs, not filmed footage; the corrected link points to the already-imported food-photography folder. The remaining three folders supplied 85 accessible photographs. Their original filenames, IDs and source folders are recorded in lib/photo-provenance.json.
-
-## Maps
-
-The in-page location picker uses bundled Leaflet 1.9.4 with OpenStreetMap tiles and attribution. Visitors can click a location, drag the pin, explicitly request geolocation or enter coordinates manually. Selected locations open in Google Maps through its universal URLs. No Google Maps API key is needed for the external handoff. Without a verified restaurant pin, the visit link opens a named Google Maps search rather than inventing coordinates.
-
-Official references: https://leafletjs.com/reference and https://developers.google.com/maps/documentation/urls/get-started
-
-## PWA and privacy
-
-Manifest, regular/maskable icons and a versioned service worker support installation on compatible browsers. Android uses the available install prompt; iPhone has Safari Add to Home Screen instructions. Cached public shell, static JS/CSS, images and last fetched catalog support offline browsing. Order APIs, staff routes, payment data, callback URLs and customer records are never cached. Checkout requires connectivity. External map tiles and fonts need connectivity, with manual-coordinate and system-font fallbacks. The original PDF and videos are excluded from automatic caching.
-
-Cart preferences use local storage; order access tokens live only in session storage and permit token-authorized order status lookup. Staff order details remain server-authorized. Starting another order clears the currently displayed tracking session; retain the reference for staff enquiries.
-
-## Verification
-
-Run `npm test` for trusted pricing, input/coordinate validation, allowlist rules, M-Pesa readiness/reconciliation and service-worker cache boundaries. Run `npm run typecheck` and the production build for compilation checks. Browser QA covers desktop/mobile layouts, carousel, cart, checkout, coordinate pin selection and Google Maps links; unconfigured staff/payment endpoints fail closed. Live provider settlement and installation on physical iPhone/Android hardware require launch testing.
-
-## Public pages and revised offline build
-
-The homepage (`/`) has a video carousel and Order now links to `/menu`. The menu groups all 300 entries under their 37 original categories. `/moments` and `/visit` are separate pages. The cart persists across page navigation. Fonts are self-hosted under public/fonts. `scripts/build-rcc.mjs` builds the Worker and writes a public static/font precache manifest, so the first completed service-worker install can reload offline without a second online visit. Large carousel MP4s remain excluded from automatic offline caching.
+`npm test` verifies catalogue handling, menu grouping, photo assignments, order validation, payment safeguards, offline exclusions, deployment ordering and Cloudflare Access token validation. `npm run typecheck` checks TypeScript. GitHub CI runs both and a production build on pushes and pull requests to `main`.

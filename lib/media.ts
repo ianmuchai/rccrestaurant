@@ -1,45 +1,53 @@
 import type {MenuItem} from './order';
-const photo=(n:number)=>'/photos/rcc-'+String(n).padStart(3,'0')+'.webp';
-export function foodImage(item:MenuItem):string{
- const n=item.name.toLowerCase(),c=item.category.toLowerCase();
- if(/pizza/.test(n))return '/assets/pizza.webp';
- if(/chicken wings/.test(n))return photo(83);
- if(/burger/.test(n))return photo(50);
- if(/chocolate donut/.test(n))return photo(71);
- if(/donut/.test(n))return photo(54);
- if(/cake|dessert|desert/.test(c))return /white forest|vanilla/.test(n)?photo(64):photo(61);
- if(/blue lagoon|blueberry mojito/.test(n))return photo(78);
- if(/strawberry.*shake|raspberry|strawberry smoothie/.test(n))return /mojito/.test(n)?photo(73):photo(80);
- if(/samosa/.test(n))return photo(39);
- if(/fish fingers/.test(n))return photo(33);
- if(/nuggets|crispy chicken/.test(n))return photo(37);
- if(/pancake/.test(n))return photo(40);
- if(/suqaar|somali breakfast|esbesso/.test(n))return photo(41);
- if(/shakshuka/.test(n))return photo(45);
- if(/butternut|vegetable soup/.test(n))return photo(46);
- if(/soup/.test(n))return photo(47);
- if(/liver|kidney|somali breakfast/.test(n))return photo(48);
- if(/english breakfast|rcc combo/.test(n))return photo(16);
- if(/salmon|fish fillet/.test(n))return photo(31);
- if(/whole fish/.test(n))return photo(4);
- if(/grilled chicken breast/.test(n))return photo(24);
- if(/chicken mandi|bbq chicken|half chicken|quarter chicken/.test(n))return photo(25);
- if(/biryani/.test(n))return photo(23);
- if(/butter chicken|chicken curry/.test(n))return photo(22);
- if(/platters/.test(c))return photo(35);
- if(/cobb|salad/.test(n))return photo(18);
- if(/alfredo|pasta|spaghetti|penne/.test(n))return photo(32);
- if(/espresso|americano|macchiato/.test(n))return photo(9);
- if(/latte|cappuccino|capuccino|flat white|mocha/.test(n))return photo(12);
- if(/mojito|mint|green smoothie|detox/.test(n))return photo(44);
- if(/mango/.test(n))return photo(7);
- if(/carrot|orange/.test(n)&&/juice/.test(c))return photo(11);
- if(/shake|smoothie/.test(c))return photo(2);
- if(/juice|lemonade/.test(c))return photo(6);
- if(/coffee|tea|matcha/.test(c))return photo(10);
- if(/breakfast|eggs/.test(c))return photo(16);
- if(/grill|chicken/.test(c))return photo(36);
- if(/rice|curry|arab/.test(c))return photo(27);
- if(/snack|pastr/.test(c))return photo(38);
- return photo(35);
+
+// Curated by meal ID after visually reviewing the supplied RCC photographs.
+// A missing entry means that meal was not identifiable in the supplied set.
+// Never fall back to a category photo: it can depict a completely different dish.
+const mealPhotos:Readonly<Record<string,number>>={
+ 'p2-english-breakfast':16,
+ 'p2-shakshuka-sunrise':45,
+ 'p2-somali-breakfast':48,
+ 'p2-esbesso':22,
+ 'p2-camel-suqaar':42,
+ 'p3-sweet-potatoes-ngwaci':13,
+ 'p3-samosa-portion-3pcs-chicken-beef-fish':39,
+ 'p3-arrow-roots-nduma':14,
+ 'p3-butternut-soup-vegan':46,
+ 'p3-cream-of-chicken-soup-non-vegan':47,
+ 'p3-house-cobb-salad':18,
+ 'p4-camel-suqaar':42,
+ 'p4-biryani-chicken':23,
+ 'p4-grilled-fish-fillet':25,
+ 'p4-whole-fish-wet-or-dry-fry':4,
+ 'p4-grilled-chicken-breast':31,
+ 'p5-full-platter-for-3-pax-5-pax':35,
+ 'p6-chicken-alfredo':32,
+ 'p6-grilled-bbq-burger-chicken-or-beef':50,
+ 'p6-fish-fingers-5pcs':33,
+ 'p8-capuccino-single':12,
+ 'p8-espresso-single':9,
+ 'p8-expresso-double':10,
+ 'p9-mango':7,
+ 'p9-apple-carrot':11,
+ 'p10-sunrise':6,
+ 'p10-blue-lagoon':78,
+ 'p10-blueberry-mojito':58,
+ 'p10-raspberry-mojito':73,
+ 'p10-virgin-mojito':44,
+ 'p10-vanilla-shake':1,
+ 'p10-strawberry-shake':80,
+ 'p12-chocolate-donut':71,
+ 'p13-white-forest-1-kg':64,
+ 'p13-white-forest-2-kg':66,
+ 'p14-crispy-chicken':37,
+ 'p14-kfc-chicken-3pcs':60,
+ 'p14-half-chicken':36,
+ 'p14-shawarma-chicken':24,
+ 'p4-grilled-camel-steak':27,
+ 'p4-bbq-chicken':36,
+ 'p14-samosa-chicken-fish':38,
+};
+export function foodImage(item:MenuItem):string|null{
+ const number=mealPhotos[item.id];
+ return number?'/photos/rcc-'+String(number).padStart(3,'0')+'.webp':null;
 }
