@@ -1,7 +1,7 @@
 'use client';
 import {useEffect,useRef,useState} from 'react';
 import Icon from './Icon';
-const slides=[{video:'/media/rcc-table.mp4',poster:'/photos/rcc-035.webp',label:'THE RCC TABLE',title:'Good food. Great company.',detail:'Made for sharing.'},{video:'/media/rcc-grill.mp4',poster:'/photos/rcc-025.webp',label:'FRESH FROM THE KITCHEN',title:'Your next favourite.',detail:'Grills, classics & more.'},{video:'/media/rcc-coffee.mp4',poster:'/photos/rcc-012.webp',label:'TAKE A MOMENT',title:'Stay a little longer.',detail:'Coffee, cake & conversation.'}];
+const slides=[{video:'/media/rcc-table-smooth.mp4',poster:'/photos/rcc-035.webp',label:'THE RCC TABLE',title:'Good food. Great company.',detail:'Made for sharing.'},{video:'/media/rcc-grill-smooth.mp4',poster:'/photos/rcc-025.webp',label:'FRESH FROM THE KITCHEN',title:'Your next favourite.',detail:'Grills, classics & more.'},{video:'/media/rcc-coffee-smooth.mp4',poster:'/photos/rcc-012.webp',label:'TAKE A MOMENT',title:'Stay a little longer.',detail:'Coffee, cake & conversation.'}];
 export default function HeroCarousel(){
  const [active,setActive]=useState(0),[still,setStill]=useState(true);
  useEffect(()=>{const preference=window.matchMedia('(prefers-reduced-motion: reduce)');const update=()=>setStill(preference.matches||!!(navigator as any).connection?.saveData);update();preference.addEventListener('change',update);return()=>preference.removeEventListener('change',update);},[]);

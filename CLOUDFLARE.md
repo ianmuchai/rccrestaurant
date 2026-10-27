@@ -5,7 +5,7 @@ Repository: https://github.com/ianmuchai/rccrestaurant
 ## One-time dashboard setup
 
 1. The **rcc-db** database is already created and its non-secret ID is saved in `cloudflare.project.json`. No source edits or database build variables are needed for this account.
-2. The **rcc-restaurant** Worker is already deployed at https://rcc-restaurant.rcc-kitengela.workers.dev. In **Workers & Pages > rcc-restaurant > Settings > Builds**, connect this GitHub repository to the existing Worker for automatic updates. Complete the GitHub App authorization if requested.
+2. The **rcc-restaurant** Worker is already deployed at https://rcc-restaurant.rcc-kitengela.workers.dev. GitHub is connected to this Worker for automatic updates from `main`. Review its configuration in **Workers & Pages > rcc-restaurant > Settings > Builds**.
 3. Use these settings:
 
 | Setting | Value |

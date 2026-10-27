@@ -48,3 +48,7 @@ yarn-error.log*
 
 # Workstation-only browser QA helpers (the portable tests are in tests/)
 /scripts/check-*.mjs
+
+# Python asset-preparation caches
+__pycache__/
+*.pyc

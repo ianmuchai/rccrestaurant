@@ -4,7 +4,7 @@ A restaurant website and installable PWA with a full-screen video carousel, cate
 
 Published preview: https://rcc-restaurant.rcc-kitengela.workers.dev
 
-The Worker and production D1 database are deployed. Connecting GitHub Builds, changing registrar nameservers, configuring staff access and enabling verified M-Pesa remain account setup steps. See [DNS_STATUS.md](DNS_STATUS.md) for the domain check.
+The Worker and production D1 database are deployed. GitHub Builds is connected to `main`. Changing registrar nameservers, configuring staff access and enabling verified M-Pesa remain account setup steps. See [DNS_STATUS.md](DNS_STATUS.md) for the domain check.
 
 ## Deploy from GitHub to Cloudflare
 
@@ -44,7 +44,7 @@ On Windows, use `npm.cmd` if PowerShell blocks `npm.ps1`. Initialize local D1 ta
 - Four public pages: `/`, `/menu`, `/moments`, `/visit`.
 - 300 original menu entries under 37 categories; unresolved source-price conflicts remain blocked.
 - Meal-specific matching of supplied RCC photographs; unphotographed meals use labeled placeholders.
-- Three muted MP4 photo-motion clips, without narration or playback controls, with overlapping fades. These are animated supplied photographs, not filmed footage. Reduced-motion and data-saving preferences use still images.
+- Three muted 60 fps MP4 photo-motion clips with continuous subpixel zoom and pan, without narration or playback controls, with overlapping fades. These are animated supplied photographs, not filmed footage. Reduced-motion and data-saving preferences use still images.
 - Responsive menu, category picker, cart persistence, delivery pins and downloadable PWA.
 - Public-page offline browsing. Staff, personal-order and payment responses are excluded from the service-worker cache.
 
@@ -63,6 +63,8 @@ The location picker uses bundled Leaflet 1.9.4 with OpenStreetMap tiles and attr
 The menu and logo originate from supplied PDFs. Photo provenance is retained in `lib/photo-provenance.json`; font and library licenses are in `docs/licenses` and vendor files. An older AI-generated illustrative mandi asset remains in the asset collection; the current carousel uses supplied RCC photos.
 
 Original menu reimport and photo preparation scripts are documented in `scripts`; they are not required to build or deploy the website. Browser QA scripts that depend on this workstation's sibling `qa-tools` directory are local review helpers, not deployment prerequisites.
+
+For optional video regeneration, install Pillow and imageio-ffmpeg, supply the original photographs under `work/drive/photos`, and run `python scripts/create-carousel-videos.py`. Run `python tests/test_carousel_motion.py` to verify fractional camera movement and portrait/landscape crop coverage. These Python tools are not needed for the website build.
 
 ## Checks
 
