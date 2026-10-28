@@ -1,5 +1,7 @@
 import type { CSSProperties } from 'react';
 const paths:Record<string,React.ReactNode>={
+ whatsapp:<><path d="M20.5 11.5a8.5 8.5 0 0 1-12.6 7.45L3 20.5l1.55-4.9A8.5 8.5 0 1 1 20.5 11.5Z"/><path d="m8 7 1.5-.5 1.1 2.5-1 1c.8 1.6 1.8 2.6 3.4 3.4l1-1 2.5 1.1L16 15c-.5 1.1-2 1.2-3.7.4C9.8 14.2 7.8 12.2 6.6 9.7 6 8.4 6.9 7.3 8 7Z"/></>,
+ android:<><path d="m7 5-2-3m12 3 2-3M5 10a7 7 0 0 1 14 0H5Zm0 3v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-5M2 12v6m20-6v6M8 19v3m8-3v3"/><circle cx="9" cy="7.5" r=".5"/><circle cx="15" cy="7.5" r=".5"/></>,
  bag:<><path d="M5 7h14l1 14H4L5 7Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></>,
  arrow:<><path d="M5 12h14M13 6l6 6-6 6"/></>,
  arrowUp:<><path d="M6 18 18 6M6 6h12v12"/></>,

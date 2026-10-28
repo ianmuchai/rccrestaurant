@@ -10,5 +10,5 @@ test('never intercepts personal data, staff, or payment requests',()=>{
  for(const path of ['/admin','/api/orders/123','/api/config','/api/mpesa/callback']){let intercepted=false;worker()({request:new Request('https://rcc.test'+path),respondWith:()=>intercepted=true});assert.equal(intercepted,false);}
 });
 test('separate public pages can reload from cache while offline',async()=>{
- for(const path of ['/menu','/moments','/visit']){const captured:{response?:Promise<Response>}={};worker()({request:{method:'GET',url:'https://rcc.test'+path,mode:'navigate',headers:new Headers()},respondWith:(p:Promise<Response>)=>captured.response=p});assert.ok(captured.response,path+' must be available offline');assert.equal(await(await captured.response).text(),'cached public asset');}
+ for(const path of ['/menu','/moments','/visit','/menu/coffee','/menu/breakfast']){const captured:{response?:Promise<Response>}={};worker()({request:{method:'GET',url:'https://rcc.test'+path,mode:'navigate',headers:new Headers()},respondWith:(p:Promise<Response>)=>captured.response=p});assert.ok(captured.response,path+' must be available offline');assert.equal(await(await captured.response).text(),'cached public asset');}
 });

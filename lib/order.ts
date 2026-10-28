@@ -1,9 +1,10 @@
+import {business} from './business.ts';
 export type Option = {id:string;label:string;price:number};
 export type MenuItem = {id:string;name:string;category:string;description:string;price:number;options:Option[];page:number;available:boolean;needsReview:boolean};
 export type CartLine = {itemId:string;optionId:string;quantity:number};
 export type Point = {lat:number;lng:number};
 export type Settings = {pickupEnabled:boolean;deliveryEnabled:boolean;zones:{id:string;name:string;fee:number}[];restaurantPoint:Point|null;address:string;phone:string;hours:string;pickupInstructions:string};
-export const defaultSettings:Settings={pickupEnabled:false,deliveryEnabled:false,zones:[],restaurantPoint:null,address:'Kitengela, Kenya',phone:'',hours:'',pickupInstructions:''};
+export const defaultSettings:Settings={pickupEnabled:false,deliveryEnabled:false,zones:[],restaurantPoint:null,address:business.address,phone:business.phone,hours:business.hours,pickupInstructions:''};
 export function priceOrder(lines:CartLine[], catalog:MenuItem[]) {
  if(!Array.isArray(lines)||lines.length<1||lines.length>50)throw new Error('Choose between 1 and 50 items.');
  let count=0;
