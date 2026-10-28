@@ -14,7 +14,7 @@ Canonical website: https://rcc.co.ke. Both official hostnames point to the Worke
 
 ## Google account setup
 
-Verify the domain property `sc-domain:rcc.co.ke` in Google Search Console, then submit `https://rcc.co.ke/sitemap.xml`. Keep the Google DNS verification record after ownership is verified. Inspect the homepage, menu and visit page; request indexing where Google allows it. Search Console processing/indexing is not immediate.
+Completed on 28 October 2026: Google verified ownership of the domain property `sc-domain:rcc.co.ke` using its exact TXT record, confirmed on Cloudflare's authoritative DNS. Search Console accepted `https://rcc.co.ke/sitemap.xml` with “Sitemap submitted successfully.” Keep the Google DNS verification record after ownership is verified. Search Console processing/indexing is not immediate; review its reports as data becomes available.
 
 The public Google Maps listing currently offers **Claim this business** and lacks website/hours. The owner should claim and verify it with Google, set the official website and menu URLs, add the confirmed hours/contact details and genuine restaurant photos, and maintain them consistently. Do not create a duplicate listing. Any phone, video or business-proof challenge must be completed by the actual owner.
 

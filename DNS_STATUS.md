@@ -1,5 +1,9 @@
 # rcc.co.ke DNS check - 27 October 2026
 
+## Update - 28 October 2026
+
+The registry now publishes only `maleah.ns.cloudflare.com` and `phil.ns.cloudflare.com`. The official website at **https://rcc.co.ke** serves successfully over HTTPS. Both official hostnames are attached to the Worker; public www requests redirect to the apex. Domain activation is complete. The remainder of this document records the initial diagnosis and correction.
+
 Cloudflare zone status at the time of checking: **Pending**.
 
 Assigned Cloudflare nameservers:

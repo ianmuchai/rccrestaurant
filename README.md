@@ -2,9 +2,9 @@
 
 A restaurant website and installable PWA with a full-screen video carousel, categorized food menu, shared cart, pickup/delivery checkout, a staff dashboard, and an M-Pesa integration.
 
-Published preview: https://rcc-restaurant.rcc-kitengela.workers.dev
+Published website: https://rcc.co.ke
 
-The Worker and production D1 database are deployed. GitHub Builds is connected to `main`. HostAfrica now has the correct Cloudflare nameservers saved; domain activation is pending registry publication and DNS propagation. Configuring staff access and enabling verified M-Pesa remain account setup steps. See [DNS_STATUS.md](DNS_STATUS.md) for the domain check.
+The Worker and production D1 database are deployed. GitHub Builds is connected to `main`. The registry now publishes the Cloudflare pair, and the official HTTPS website is live. Configuring staff access and enabling verified M-Pesa remain account setup steps. See [DNS_STATUS.md](DNS_STATUS.md) for the domain check and [docs/SEO.md](docs/SEO.md) for search setup and maintenance.
 
 ## Deploy from GitHub to Cloudflare
 
