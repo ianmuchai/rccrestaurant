@@ -19,3 +19,16 @@ test('next and previous reach every clip and wrap at either boundary',()=>{
  assert.equal(stepHero(2,1),3);
  assert.equal(stepHero(6,-1),5);
 });
+
+test('drinks preserve portrait framing and other video posters match the first frame',()=>{
+ for(const slide of heroSlides){
+  if(slide.group==='drinks'){
+   assert.equal(slide.portrait,true);
+   assert.match(slide.video,/-framed\.mp4$/);
+   assert.match(slide.poster,/\/photos\/rcc-/);
+  }else{
+   assert.equal(slide.portrait,false);
+   assert.equal(slide.poster,slide.video.replace('.mp4','-poster.webp'));
+  }
+ }
+});
