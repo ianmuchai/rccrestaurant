@@ -206,13 +206,9 @@ html{scroll-padding-top:96px}
  .storefront-main--has-cart~.site-footer{padding-bottom:82px}.whatsapp-float{width:48px;height:48px;border-radius:15px}.whatsapp-mark{width:33px;height:33px}.whatsapp-mark svg{width:23px;height:23px}.whatsapp-label{display:none}
 }
 @media(prefers-reduced-motion:reduce){.whatsapp-float,.whatsapp-label{transition:none}.whatsapp-float:hover{transform:none}}
-/* Portrait drinks stay completely in frame, with gentle movement on the GPU. */
-.hero-drink-backdrop{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.hero-drink-frame{position:absolute;left:43%;top:12%;width:51%;height:68%;transform-origin:center;will-change:transform}
-.hero-drink-frame .hero-image,.hero-drink-frame .hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:center}
-.hero-slide.active .hero-drink-frame,.hero-slide.outgoing .hero-drink-frame{animation:rcc-drink-drift 8s ease-in-out both}
-@keyframes rcc-drink-drift{from{transform:translate3d(-.6%,.3%,0) scale(1)}to{transform:translate3d(.6%,-.3%,0) scale(1.018)}}
+/* Keep drinks in the same edge-to-edge composition as the other food slides. */
+.hero-drink-media{will-change:transform}
+.hero-slide.active .hero-drink-media,.hero-slide.outgoing .hero-drink-media{animation:rcc-drink-full-bleed 8s ease-in-out both}
+@keyframes rcc-drink-full-bleed{from{transform:translate3d(0,0,0) scale(1.001)}to{transform:translate3d(.25%,-.25%,0) scale(1.018)}}
 .hero-shade,.hero-topline,.hero-content,.hero-glass,.hero-bottom{z-index:3}
-@media(max-width:700px){.hero--drinks .hero-content{top:14%;max-width:280px}.hero--drinks h1{font-size:27px;line-height:1.15;margin:10px 0 14px}.hero--drinks .hero-content .button{min-height:38px;padding-block:9px}.hero-drink-frame{left:14%;top:34%;width:72%;height:42%}.storefront-main--has-cart .hero-drink-frame{height:32%}}
-@media(max-width:700px) and (max-height:650px){.hero-drink-frame{top:35%;height:40%}.storefront-main--has-cart .hero-drink-frame{height:29%}}
-@media(prefers-reduced-motion:reduce){.hero-slide.active .hero-drink-frame,.hero-slide.outgoing .hero-drink-frame{animation:none}}
+@media(prefers-reduced-motion:reduce){.hero-slide.active .hero-drink-media,.hero-slide.outgoing .hero-drink-media{animation:none}}

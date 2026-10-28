@@ -46,7 +46,7 @@ export default function HeroCarousel(){
   const strip=categories.current,button=strip?.querySelector<HTMLElement>('[aria-pressed="true"]');
   if(strip&&button)strip.scrollTo({left:button.offsetLeft-(strip.clientWidth-button.offsetWidth)/2,behavior:still?'instant':'smooth'});
  },[slide.group,still]);
- return <section className={'hero video-carousel'+(slide.portrait?' hero--drinks':'')} aria-label="RCC food video carousel">
+ return <section className="hero video-carousel" aria-label="RCC food video carousel">
   {slides.map((s,i)=><SlideMedia key={s.video} slide={s} active={i===active} next={i===stepHero(active,1)} outgoing={i===position.previous} still={still}/>)}
   <div className="hero-shade"/>
   <div className="hero-topline"><span><i/>RCC RESTAURANT</span><span>KITENGELA, KENYA</span></div>
@@ -72,8 +72,7 @@ function SlideMedia({slide,active,next,outgoing,still}:{slide:typeof slides[numb
   return()=>{cancelled=true;clearTimeout(pause);};
  },[active,next,outgoing,still]);
  return <div className={'hero-slide'+(active?' active':outgoing?' outgoing':'')} aria-hidden="true">
-  {slide.portrait&&<img className="hero-drink-backdrop" src={slide.backdrop} alt=""/>}
-  <div className={slide.portrait?'hero-drink-frame':'hero-media-frame'}>
+  <div className={'hero-media-frame'+(slide.portrait?' hero-drink-media':'')}>
   <img className="hero-image" src={slide.poster} alt="" fetchPriority={active?'high':'auto'}/>
   {!still&&(active||next||(outgoing&&playing))&&<video ref={video} className={playing?'hero-video playing':'hero-video'} src={slide.video} poster={slide.poster} muted playsInline loop preload="auto" onPlaying={()=>setPlaying(true)} onError={()=>setPlaying(false)}/>}
   </div>
