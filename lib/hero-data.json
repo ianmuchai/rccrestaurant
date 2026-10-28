@@ -1,0 +1,68 @@
+[
+  {
+    "id": "breakfast",
+    "label": "Breakfast",
+    "title": "A beautiful start.",
+    "detail": "Breakfast, the RCC way.",
+    "href": "/menu/breakfast",
+    "photos": [
+      16,
+      45
+    ]
+  },
+  {
+    "id": "lunch",
+    "label": "Lunch",
+    "title": "Make lunch a moment.",
+    "detail": "Fresh from our kitchen.",
+    "href": "/menu",
+    "photos": [
+      23,
+      31
+    ]
+  },
+  {
+    "id": "platters",
+    "label": "Platters",
+    "title": "Better together.",
+    "detail": "Made for sharing.",
+    "href": "/menu/platters",
+    "photos": [
+      35,
+      5
+    ]
+  },
+  {
+    "id": "drinks",
+    "label": "Drinks",
+    "title": "A little refreshment.",
+    "detail": "Fresh, bright & chilled.",
+    "href": "/menu",
+    "photos": [
+      86,
+      87
+    ]
+  },
+  {
+    "id": "coffee",
+    "label": "Coffee",
+    "title": "Take your time.",
+    "detail": "Your favourite coffee moment.",
+    "href": "/menu/coffee",
+    "photos": [
+      12,
+      10
+    ]
+  },
+  {
+    "id": "desserts",
+    "label": "Desserts",
+    "title": "Something sweet.",
+    "detail": "Save room for a little joy.",
+    "href": "/menu/desserts",
+    "photos": [
+      71,
+      64
+    ]
+  }
+]

@@ -179,3 +179,12 @@ html{scroll-padding-top:96px}
 }
 @media(max-width:380px){.install-button--header .install-label{display:none}.header-actions .order-now svg{display:none}.site-footer .footer-app{flex-wrap:wrap}.footer-app .install-button{min-width:135px}.hero-glass{gap:10px}.hero-glass p{font-size:12px}.hero-glass .eyebrow{font-size:7px}}
 @media(max-width:700px){.header-actions .order-now{white-space:nowrap}.header-actions .order-now svg{display:none}}
+/* Food collections within the full-screen video hero. */
+.hero-category-bottom{gap:22px}.hero-categories{position:relative;display:flex;gap:4px;min-width:0;max-width:100%;padding:5px;border:1px solid #fff4;border-radius:14px;background:#26121b26;overflow-x:auto;scrollbar-width:none;-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px)}
+.hero-categories::-webkit-scrollbar{display:none}.hero-categories button{flex-shrink:0;min-height:40px;padding:9px 15px;border:1px solid transparent;border-radius:10px;background:transparent;color:#fff5e9;font-size:11px;font-weight:500;letter-spacing:.2px;transition:background .25s,color .25s}
+.hero-categories button[aria-pressed=true]{background:#f8f0e6ed;color:#641d28;border-color:#ffffff80}.hero-categories button:hover{background:#ffffff26}.hero-categories button[aria-pressed=true]:hover{background:#fff5e9}.hero-categories button:focus-visible{outline:2px solid #fff3da;outline-offset:-3px}
+.hero-slide-count{font-size:12px;color:#fff4e6;font-variant-numeric:tabular-nums;white-space:nowrap;margin-right:8px}.hero-slide-count>span{color:#ffffff9c;font-size:10px}.hero-category-bottom .carousel-nav{flex-shrink:0}
+@media(max-width:900px){.hero-categories button{padding-inline:11px;font-size:10px}.hero-category-bottom{gap:12px}}
+@media(max-width:700px){.hero-category-bottom{left:6%;right:6%;bottom:18px;display:flex;flex-wrap:wrap;gap:10px}.hero-categories{flex-basis:100%;width:100%;padding:4px;border-radius:11px}.hero-categories button{min-height:38px;padding:8px 11px;font-size:10px}.hero-category-bottom .carousel-nav{margin-left:auto;gap:8px}.hero-category-bottom .icon-button{width:32px;height:32px}.storefront-main--home .hero-glass{bottom:124px}.hero-slide-count{font-size:11px}}
+@media(max-height:500px) and (min-width:701px){.hero-categories button{min-height:32px;padding-block:6px}.hero-category-bottom{bottom:16px}.storefront-main--home .hero-glass{bottom:76px;padding:12px}.hero-content h1{margin-block:10px}.hero-content{top:25%}}
+@media(max-width:700px){.storefront-main--home.storefront-main--has-cart .hero-glass{bottom:190px}}

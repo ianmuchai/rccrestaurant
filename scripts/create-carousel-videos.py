@@ -1,7 +1,7 @@
 """Encode supplied RCC photos with continuous subpixel zoom and pan (not filmed footage).
 Requires Pillow and imageio-ffmpeg for asset preparation only.
 """
-import math, subprocess, sys
+import json, math, subprocess, sys
 from pathlib import Path
 sys.path.insert(0,str(Path('../qa-tools/python').resolve()))
 import imageio_ffmpeg
@@ -12,9 +12,10 @@ FPS=60
 FRAMES=FPS*8
 
 def encode(name,photo):
- source=ImageOps.exif_transpose(Image.open(f'work/drive/photos/rcc-{photo}.jpg')).convert('RGB')
+ source=ImageOps.exif_transpose(Image.open(f'work/drive/photos/rcc-{photo:03d}.jpg')).convert('RGB')
  target=Path('public/media')/(name+'-smooth.mp4')
- command=[imageio_ffmpeg.get_ffmpeg_exe(),'-hide_banner','-loglevel','error','-y','-f','rawvideo','-pixel_format','rgb24','-video_size',f'{SIZE[0]}x{SIZE[1]}','-framerate',str(FPS),'-i','pipe:0','-an','-c:v','libx264','-preset','fast','-crf','22','-pix_fmt','yuv420p','-movflags','+faststart',str(target)]
+ temporary=target.with_suffix('.partial.mp4')
+ command=[imageio_ffmpeg.get_ffmpeg_exe(),'-hide_banner','-loglevel','error','-y','-f','rawvideo','-pixel_format','rgb24','-video_size',f'{SIZE[0]}x{SIZE[1]}','-framerate',str(FPS),'-i','pipe:0','-an','-c:v','libx264','-threads','2','-preset','fast','-crf','22','-pix_fmt','yuv420p','-movflags','+faststart',str(temporary)]
  process=subprocess.Popen(command,stdin=subprocess.PIPE)
  try:
   for index in range(FRAMES):
@@ -24,10 +25,17 @@ def encode(name,photo):
    process.stdin.write(frame.tobytes())
   process.stdin.close()
   if process.wait()!=0:raise RuntimeError('Video encoding failed: '+name)
+  temporary.replace(target)
  except BaseException:
-  process.kill();process.wait();raise
+  process.kill();process.wait();temporary.unlink(missing_ok=True);raise
  print(name,round(target.stat().st_size/1024),'KB',flush=True)
 
 if __name__=='__main__':
  Path('public/media').mkdir(exist_ok=True)
- for name,photo in [('rcc-table','035'),('rcc-grill','025'),('rcc-coffee','012')]:encode(name,photo)
+ # Keep generation aligned with the category selector and poster mapping.
+ for group in json.loads(Path('lib/hero-data.json').read_text()):
+  for index,photo in enumerate(group['photos'],1):
+   name=f"rcc-{group['id']}-{index}"
+   target=Path('public/media',name+'-smooth.mp4')
+   valid=target.exists() and subprocess.run([imageio_ffmpeg.get_ffmpeg_exe(),'-v','error','-i',str(target),'-t','0','-f','null','-'],capture_output=True).returncode==0
+   if not valid:encode(name,photo)
