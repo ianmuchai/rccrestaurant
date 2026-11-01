@@ -8,14 +8,18 @@ test('metadata uses the official canonical and a unique title/description per pu
  const pages=['/','/menu','/moments','/visit'].map(p=>pageMetadata(p));
  assert.equal(new Set(pages.map(p=>p.title)).size,4);assert.equal(new Set(pages.map(p=>p.description)).size,4);
  for(const [i,p] of pages.entries()){assert.equal(p.alternates?.canonical,'https://rcc.co.ke'+['/','/menu','/moments','/visit'][i]);assert.ok(p.openGraph);assert.ok(p.twitter);}
+ assert.equal(pages[0].title,'RCC Restaurant in Kitengela | Breakfast, Coffee & Dining');
+ for(const page of [...pages,...menuCategories.map(c=>pageMetadata('/menu/'+c.slug))]){assert.match(String(page.title),/RCC/i);assert.match(String(page.description),/RCC/i);}
 });
 test('structured data includes confirmed local details without inventing reviews or coordinates',()=>{
- const graph=restaurantGraph(defaultSettings);const restaurant=graph['@graph'].find((n:any)=>n['@type']==='Restaurant') as any;
+ const graph=restaurantGraph(defaultSettings);const restaurant=graph['@graph'].find((n:any)=>n['@type']==='Restaurant') as any;const website=graph['@graph'].find((n:any)=>n['@type']==='WebSite') as Record<string,unknown>;
  assert.equal(restaurant.telephone,'+254722862575');assert.match(restaurant.address.streetAddress,/Equity Afya/);assert.equal(restaurant.openingHoursSpecification[0].opens,'05:00');assert.equal(restaurant.openingHoursSpecification[0].closes,'00:00');
+ assert.equal(restaurant.alternateName,'RCC');assert.equal(website.alternateName,'RCC');assert.equal((website.about as {'@id':string})['@id'],restaurant['@id']);assert.match(String(website.description),/RCC Restaurant/i);
  assert.equal(restaurant.aggregateRating,undefined);assert.equal(restaurant.geo,undefined);assert.equal(restaurant.potentialAction,undefined);
 });
 test('menu structured data never advertises unresolved or unavailable prices and escapes script injection',()=>{
  const graph=menuGraph([item,{...item,id:'review',needsReview:true},{...item,id:'unavailable',available:false}],'/menu');
+ assert.equal(graph.provider['@id'],'https://rcc.co.ke/#restaurant');
  const entries=graph.hasMenuSection[0].hasMenuItem;
  assert.ok(entries[0].offers);assert.equal(entries[0].offers[0].price,'200.00');assert.equal(entries[0].offers[0].priceCurrency,'KES');assert.equal(entries[1].offers,undefined);assert.equal(entries[2].offers,undefined);
  const serialized=serializeJsonLd(graph);assert.ok(!serialized.includes('</script>'));assert.equal(JSON.parse(serialized).hasMenuSection[0].hasMenuItem[0].name,item.name);

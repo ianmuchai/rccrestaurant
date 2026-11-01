@@ -1,6 +1,7 @@
 // Address, phone and opening hours confirmed by the restaurant owner.
 export const business = {
   name: 'RCC Restaurant',
+  shortName: 'RCC',
   site: 'https://rcc.co.ke',
   phone: '+254722862575',
   phoneDisplay: '+254 722 862575',

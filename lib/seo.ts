@@ -20,7 +20,7 @@ export const categoryHref=(category:string)=>{
   return !category?'/menu':match?'/menu/'+match.slug:'/menu?category='+encodeURIComponent(category);
 };
 const pages:Record<string,{title:string;description:string}>={
-  '/':{title:'RCC Restaurant Kitengela | Breakfast, Coffee & Dining',description:'Discover RCC Restaurant on Namanga Road, next to Equity Afya in Kitengela. Explore breakfast, coffee, grills, pizza and more. Open daily, 5 a.m. to midnight.'},
+  '/':{title:'RCC Restaurant in Kitengela | Breakfast, Coffee & Dining',description:'Visit RCC Restaurant, known as RCC, on Namanga Road beside Equity Afya in Kitengela. Browse the menu, including breakfast, coffee, grills and pizza, then plan your visit. Open daily, 5 a.m. to midnight.'},
   '/menu':{title:'RCC Menu & Prices | Restaurant in Kitengela',description:'Browse the RCC Restaurant menu and prices in Kenyan shillings. Explore breakfast, Somali and Arab cuisine, grills, pizza, coffee and desserts in Kitengela.'},
   '/moments':{title:'Food, Coffee & Sharing Platters | RCC Kitengela',description:'Explore RCC moments: sharing platters, coffee and sweet treats from RCC Restaurant in Kitengela. Discover the menu and plan your next visit.'},
   '/visit':{title:'Find RCC Restaurant | Namanga Road, Kitengela',description:'Visit RCC Restaurant on Namanga Road next to Equity Afya, Kitengela. Open daily from 5 a.m. to midnight. Call +254 722 862575 or get Google Maps directions.'},
@@ -38,8 +38,10 @@ export function pageMetadata(path:string):Metadata {
   };
 }
 export function restaurantGraph(config:Settings) {
+  const restaurantId=business.site+'/#restaurant';
+  const description=`${business.name}, also known as ${business.shortName}, is on ${business.street} in ${business.locality}. Browse the menu and plan your visit.`;
   const restaurant:Record<string,unknown>={
-    '@type':'Restaurant','@id':business.site+'/#restaurant',name:business.name,url:business.site+'/',
+    '@type':'Restaurant','@id':restaurantId,name:business.name,alternateName:business.shortName,description,url:business.site+'/',
     logo:business.site+'/brand/icon-512.png',image:[business.site+'/photos/rcc-035.webp',business.site+'/photos/rcc-025.webp',business.site+'/photos/rcc-012.webp'],
     telephone:config.phone||business.phone,
     address:{'@type':'PostalAddress',streetAddress:config.address&&config.address!=='Kitengela, Kenya'&&config.address!==business.address?config.address:business.street,addressLocality:business.locality,addressRegion:business.region,addressCountry:business.country},
@@ -50,12 +52,12 @@ export function restaurantGraph(config:Settings) {
   if(config.restaurantPoint)restaurant.geo={'@type':'GeoCoordinates',latitude:config.restaurantPoint.lat,longitude:config.restaurantPoint.lng};
   return {'@context':'https://schema.org','@graph':[
     restaurant,
-    {'@type':'WebSite','@id':business.site+'/#website',url:business.site+'/',name:business.name,inLanguage:'en-KE',publisher:{'@id':business.site+'/#restaurant'}},
+    {'@type':'WebSite','@id':business.site+'/#website',url:business.site+'/',name:business.name,alternateName:business.shortName,description,about:{'@id':restaurantId},inLanguage:'en-KE',publisher:{'@id':restaurantId}},
   ]};
 }
 export function menuGraph(items:MenuItem[],path:string) {
   const categories=[...new Set(items.map(item=>item.category))];
-  return {'@context':'https://schema.org','@type':'Menu','@id':business.site+path+'#menu',name:'RCC Restaurant menu',url:business.site+path,inLanguage:'en-KE',
+  return {'@context':'https://schema.org','@type':'Menu','@id':business.site+path+'#menu',name:business.name+' menu',url:business.site+path,inLanguage:'en-KE',provider:{'@id':business.site+'/#restaurant'},
     hasMenuSection:categories.map(category=>({'@type':'MenuSection',name:category,hasMenuItem:items.filter(i=>i.category===category).map(item=>({
       '@type':'MenuItem','@id':business.site+'/menu#dish-'+item.id,name:item.name,...(item.description?{description:item.description}:{}),
       ...(foodImage(item)?{image:business.site+foodImage(item)}:{}),
