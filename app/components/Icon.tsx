@@ -11,6 +11,7 @@ const paths:Record<string,React.ReactNode>={
  target:<><circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="2"/><path d="M12 1v4m0 14v4M1 12h4m14 0h4"/></>,
  phone:<><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M10 18h4"/></>,
  download:<><path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5"/></>,
+ trash:<><path d="M3 6h18M8 6V4h8v2m3 0-.9 14H5.9L5 6m4 4v6m6-6v6"/></>,
  check:<path d="m5 12 4 4L19 6"/>,chevron:<path d="m9 5 7 7-7 7"/>,
  leaf:<><path d="M5 19C-2 8 12 3 21 3c0 10-3 20-14 15M5 21 16 9"/></>,
  bike:<><circle cx="5" cy="17" r="4"/><circle cx="19" cy="17" r="4"/><path d="m5 17 6-10 8 10M8 7h6M14 3h4"/></>,
