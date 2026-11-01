@@ -1,3 +1,18 @@
+/* Keep every RCC logo at its source aspect ratio, including small-screen header/footer variants. */
+.site-header .brand img,
+.site-footer .footer-brand img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 901 / 651;
+  object-fit: contain;
+}
+
+.google-landing .google-landing__header img {
+  height: auto;
+  aspect-ratio: 901 / 657;
+  object-fit: contain;
+}
+
 @media (min-width: 701px) {
   .site-header .brand {
     width: 96px;
