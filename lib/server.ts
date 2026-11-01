@@ -1,7 +1,7 @@
 import { env } from 'cloudflare:workers';
 import baseCatalog from './catalog.json';
 import { defaultSettings, type MenuItem,type Settings } from './order';
-import {authenticateStaff} from './staff-auth';
+import {authenticateStaff,staffAuthConfigured} from './staff-auth';
 export const secrets=()=>env as unknown as Record<string,any>;
 export function database():D1Database {
  const db=secrets().DB;if(!db)throw new Error('Order storage is not connected yet.');return db;
@@ -9,7 +9,9 @@ export function database():D1Database {
 export async function catalog():Promise<MenuItem[]> {
  const {results}=await database().prepare('SELECT id,value FROM menu_overrides').all<{id:string;value:string}>();
  const changes=new Map(results.map(r=>[r.id,JSON.parse(r.value)]));
- return (baseCatalog as MenuItem[]).map(i=>({...i,...changes.get(i.id)}));
+ const base=(baseCatalog as MenuItem[]).map(i=>({...i,...changes.get(i.id)}));
+ const additions=results.map(r=>JSON.parse(r.value) as MenuItem).filter(i=>i.custom===true);
+ return [...base,...additions];
 }
 export async function settings():Promise<Settings> {
  const row=await database().prepare("SELECT value FROM settings WHERE key='restaurant'").first<{value:string}>();
@@ -17,7 +19,8 @@ export async function settings():Promise<Settings> {
 }
 export async function requireStaff(request:Request) {
  const identity=await authenticateStaff(request,secrets());
- if(!identity)throw new HttpError(403,'Staff access requires a verified Cloudflare Access login.');
+ if(!identity&&!staffAuthConfigured(secrets()))throw new HttpError(503,'Staff username and password sign-in has not been configured on this site yet.');
+ if(!identity)throw new HttpError(401,'Please sign in with your staff username and password.');
  return identity;
 }
 export class HttpError extends Error {status:number;constructor(status:number,message:string){super(message);this.status=status;}}

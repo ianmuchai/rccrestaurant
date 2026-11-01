@@ -1,36 +1,29 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
-import {createLocalJWKSet,exportJWK,generateKeyPair,SignJWT} from 'jose';
-import {authenticateStaff} from '../lib/staff-auth.ts';
+import {authenticateStaff,createStaffSession,STAFF_SESSION_COOKIE,staffAuthConfigured,verifyStaffCredentials} from '../lib/staff-auth.ts';
 
-const issuer='https://rcc-test.cloudflareaccess.com';
-const config={CF_ACCESS_TEAM_DOMAIN:issuer,CF_ACCESS_AUD:'staff-app-audience',STAFF_EMAILS:'manager@rcc.co.ke'};
-const pair=await generateKeyPair('RS256');
-const jwk={...await exportJWK(pair.publicKey),kid:'test-key',alg:'RS256',use:'sig'};
-const keys=createLocalJWKSet({keys:[jwk]});
-async function token(overrides:Record<string,unknown>={},privateKey=pair.privateKey){return new SignJWT({email:'manager@rcc.co.ke',...overrides}).setProtectedHeader({alg:'RS256',kid:'test-key'}).setIssuer(issuer).setAudience(config.CF_ACCESS_AUD).setSubject('staff-123').setIssuedAt().setExpirationTime('5m').sign(privateKey);}
-const request=(value:string)=>new Request('https://rcc.co.ke/api/staff/overview',{headers:{'cf-access-jwt-assertion':value}});
+const config={STAFF_USERNAME:'manager',STAFF_PASSWORD:'strong-password-123',STAFF_SESSION_SECRET:'session-secret-that-is-long-enough-for-tests'};
+const request=(cookie?:string)=>new Request('https://rcc.co.ke/api/staff/overview',{headers:cookie?{cookie}:{}});
 
-test('staff authentication rejects raw identity headers and missing configuration',async()=>{
- const forged=new Request('https://rcc.co.ke/api/staff/overview',{headers:{'oai-authenticated-user-id':'manager','cf-access-authenticated-user-email':'manager@rcc.co.ke'}});
- assert.equal(await authenticateStaff(forged,config,keys),null);
- assert.equal(await authenticateStaff(request(await token()),{},keys),null);
- assert.equal(await authenticateStaff(request(await token()),{...config,STAFF_EMAILS:''},keys),null);
- assert.equal(await authenticateStaff(request(await token()),{...config,CF_ACCESS_TEAM_DOMAIN:'http://localhost'},keys),null);
+test('staff login requires complete, strong runtime configuration',()=>{
+ assert.equal(staffAuthConfigured(config),true);
+ assert.equal(staffAuthConfigured({...config,STAFF_PASSWORD:'short'}),false);
+ assert.equal(staffAuthConfigured({...config,STAFF_SESSION_SECRET:'too-short'}),false);
+ assert.equal(staffAuthConfigured({}),false);
 });
-test('only a correctly signed token with an allowed staff email is accepted',async()=>{
- assert.equal(await authenticateStaff(request(await token()),config,keys),'manager@rcc.co.ke');
- assert.equal(await authenticateStaff(request(await token({email:'visitor@example.com'})),config,keys),null);
- assert.equal(await authenticateStaff(request(await token({email:'manager@rcc.co.ke.evil.example'})),config,keys),null);
- const wrong=await generateKeyPair('RS256');
- assert.equal(await authenticateStaff(request(await token({},wrong.privateKey)),config,keys),null);
+
+test('staff credentials accept only the configured username and password',async()=>{
+ assert.equal(await verifyStaffCredentials('manager','strong-password-123',config),true);
+ assert.equal(await verifyStaffCredentials('Manager','strong-password-123',config),false);
+ assert.equal(await verifyStaffCredentials('manager','wrong-password',config),false);
+ assert.equal(await verifyStaffCredentials('manager','strong-password-123',{}),false);
 });
-test('wrong audience, issuer, expired and malformed tokens are rejected',async()=>{
- const base=()=>new SignJWT({email:'manager@rcc.co.ke'}).setProtectedHeader({alg:'RS256',kid:'test-key'}).setSubject('staff-123').setIssuedAt();
- for(const jwt of [
-  await base().setIssuer(issuer).setAudience('another-app').setExpirationTime('5m').sign(pair.privateKey),
-  await base().setIssuer('https://other.cloudflareaccess.com').setAudience(config.CF_ACCESS_AUD).setExpirationTime('5m').sign(pair.privateKey),
-  await base().setIssuer(issuer).setAudience(config.CF_ACCESS_AUD).setExpirationTime(Math.floor(Date.now()/1000)-60).sign(pair.privateKey),
-  'not-a-token',
- ])assert.equal(await authenticateStaff(request(jwt),config,keys),null);
+
+test('staff APIs accept signed staff sessions and reject forged or stale cookies',async()=>{
+ const token=await createStaffSession('manager',config);
+ assert.equal(await authenticateStaff(request(`${STAFF_SESSION_COOKIE}=${token}`),config),'manager');
+ assert.equal(await authenticateStaff(request(),config),null);
+ assert.equal(await authenticateStaff(new Request('https://rcc.co.ke/api/staff/overview',{headers:{'oai-authenticated-user-id':'manager'}}),config),null);
+ assert.equal(await authenticateStaff(request(`${STAFF_SESSION_COOKIE}=not-a-token`),config),null);
+ assert.equal(await authenticateStaff(request(`${STAFF_SESSION_COOKIE}=${token}`),{...config,STAFF_PASSWORD:'rotated-password-123'}),null);
 });

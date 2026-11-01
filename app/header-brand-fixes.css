@@ -1,0 +1,22 @@
+@media (min-width: 701px) {
+  .site-header .brand {
+    width: 96px;
+  }
+
+  .site-header .brand img {
+    height: auto;
+    mix-blend-mode: normal;
+  }
+
+  .site-footer .footer-brand img,
+  .google-landing__header img {
+    height: auto;
+    mix-blend-mode: normal;
+  }
+}
+
+@media (max-width: 700px) {
+  .site-header .header-actions .order-now {
+    display: none;
+  }
+}

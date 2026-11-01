@@ -1,0 +1,10 @@
+.admin-new-menu{margin:0 0 24px;padding:20px;border:1px solid var(--line);border-radius:12px;background:#fff9}
+.admin-new-menu h3{margin:0}
+.admin-new-menu textarea{resize:vertical}
+.admin-new-menu [role=status]{font-size:12px;color:#28643a}
+@media(max-width:700px){.admin-new-menu{padding:15px}.admin-new-menu .form-grid{grid-template-columns:1fr}}
+.admin-account-actions{display:flex;align-items:center;gap:22px}
+.admin-login{width:min(100%,440px);margin:22px auto 0;text-align:left}
+.admin-login>p:first-child{font-size:13px;color:var(--muted);line-height:1.6}
+.admin-login .error{font-size:12px}
+@media(max-width:700px){.admin-account-actions{gap:12px}.admin-account-actions .text-button{font-size:10px}}

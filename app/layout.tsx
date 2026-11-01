@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import "./refinements.css";
+import "./header-brand-fixes.css";
 import {business} from '../lib/business';
 import {pageMetadata} from '../lib/seo';
 import {InstallProvider} from './components/Install';

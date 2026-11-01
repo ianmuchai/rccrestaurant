@@ -13,7 +13,7 @@ export const metadata:Metadata={
 
 const choices=[
  {label:'Explore the menu',detail:'Find something you’ll love.',href:'/menu',icon:BookOpen,external:false,kind:'menu'},
- {label:'Get directions',detail:'We’re on Namanga Road, Kitengela.',href:business.maps,icon:MapPin,external:true,kind:'maps'},
+ {label:'Share directions',detail:'We’re on Namanga Road, Kitengela.',href:business.maps,icon:MapPin,external:true,kind:'maps'},
  {label:'Review us on Google',detail:'Open our profile and choose Write a review.',href:business.maps,icon:Star,external:true,kind:'review'},
 ] as const;
 

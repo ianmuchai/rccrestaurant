@@ -27,17 +27,17 @@ This repository does not automatically transfer domain registration, change name
 
 ## Secure staff login
 
-Staff APIs are locked until Cloudflare Access and the following Worker runtime settings are configured:
+The staff portal uses an application-level username and password. Configure these three values as **Worker secrets** in Cloudflare (Worker & Pages → `rcc-restaurant` → Settings → Variables and Secrets):
 
 | Runtime setting | Value |
 | --- | --- |
-| `CF_ACCESS_TEAM_DOMAIN` | Your exact `https://TEAM.cloudflareaccess.com` URL |
-| `CF_ACCESS_AUD` | The application's Application Audience (AUD) tag |
-| `STAFF_EMAILS` | Comma-separated approved staff email addresses |
+| `STAFF_USERNAME` | A private staff username (3–128 characters) |
+| `STAFF_PASSWORD` | A strong password of at least 12 characters |
+| `STAFF_SESSION_SECRET` | A randomly generated secret of at least 32 characters |
 
-In Cloudflare Zero Trust, create one self-hosted Access application covering **both** `rcc.co.ke/admin` (and its subpaths) and `rcc.co.ke/api/staff/*`. Allow only the intended staff emails. Add equivalent paths for `www` if staff use it. Do not protect the public menu, checkout APIs, or M-Pesa callback with an interactive login.
+For CLI setup, run `npx wrangler secret put STAFF_USERNAME`, then repeat for `STAFF_PASSWORD` and `STAFF_SESSION_SECRET`; enter each value at Wrangler's prompt. Generate the session secret with Node.js using `node -e "console.log(require('node:crypto').randomBytes(48).toString('base64url'))"`. Do not put real credentials in GitHub, source files, or chat.
 
-The Worker verifies the Access JWT signature, issuer, audience, expiry and staff email. A forged email or `oai-authenticated-user-id` header grants no access. Direct requests to `workers.dev` also require the verified token for staff APIs. `STAFF_USER_IDS` is no longer used.
+If an existing Cloudflare Access application protects `/admin` or `/api/staff/*`, remove those paths from that application so the username/password form and its session cookie can reach the Worker. Staff API requests still require a signed, HttpOnly, Secure, SameSite session cookie. Login attempts are rate-limited; sessions expire after eight hours and password rotation invalidates active sessions.
 
 Once authenticated, use `/admin` to configure the restaurant pin, hours, contact details, pickup/delivery, delivery zones/fees, and resolve menu prices awaiting review. Both fulfillment modes start disabled.
 

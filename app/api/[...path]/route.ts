@@ -1,6 +1,7 @@
 import { authorizedOrder,catalog,database,hash,HttpError,json,limited,readBody,requireStaff,sameOrigin,secrets,settings } from '../../../lib/server';
 import { normalizePhone,priceOrder,reconcilePayment,validPoint,validateSettings } from '../../../lib/order';
 import { initiatePayment,paymentReady,queryPayment } from '../../../lib/mpesa';
+import {clearStaffSessionCookie,createStaffSession,staffAuthConfigured,staffSessionCookie,verifyStaffCredentials} from '../../../lib/staff-auth';
 export const dynamic='force-dynamic';
 const now=()=>new Date().toISOString();
 function text(v:unknown,max:number,required=false){if(typeof v!=='string'||v.length>max||(required&&!v.trim()))throw new HttpError(400,'Please check your contact and address details.');return v.trim();}
@@ -92,6 +93,24 @@ async function handle(request:Request) {
   ]);
   return json({ResultCode:0,ResultDesc:'Accepted'});
  }
+ if(path==='staff/login'&&method==='POST'){
+  sameOrigin(request);
+  const configuration=secrets();
+  if(!staffAuthConfigured(configuration))throw new HttpError(503,'Staff username and password sign-in has not been configured on this site yet.');
+  await limited(request,'staff-login',5);
+  const b=await readBody(request);
+  if(!await verifyStaffCredentials(b?.username,b?.password,configuration))throw new HttpError(401,'The username or password is incorrect.');
+  const token=await createStaffSession(configuration.STAFF_USERNAME,configuration);
+  const response=json({ok:true});
+  response.headers.append('Set-Cookie',staffSessionCookie(token));
+  return response;
+ }
+ if(path==='staff/logout'&&method==='POST'){
+  sameOrigin(request);
+  const response=json({ok:true});
+  response.headers.append('Set-Cookie',clearStaffSessionCookie());
+  return response;
+ }
  if(path.startsWith('staff/')){
   const actor=await requireStaff(request);if(method!=='GET')sameOrigin(request);
   if(path==='staff/overview'&&method==='GET'){
@@ -105,8 +124,18 @@ async function handle(request:Request) {
    const b=await readBody(request);const current=(await catalog()).find(i=>i.id===b.id);if(!current)throw new HttpError(404,'Item not found.');
    if(typeof b.available!=='boolean'||typeof b.needsReview!=='boolean'||!Array.isArray(b.options)||b.options.length!==current.options.length)throw new HttpError(400,'Invalid menu update.');
    const options=current.options.map(o=>{const update=b.options.find((p:any)=>p.id===o.id);if(!update||!Number.isSafeInteger(update.price)||update.price<1||update.price>100000)throw new HttpError(400,'Enter valid whole-shilling prices.');return {...o,price:update.price};});
-   const value={available:b.available,needsReview:b.needsReview,price:options[0].price,options};
+   const value={...(current.custom?current:{}),available:b.available,needsReview:b.needsReview,price:options[0].price,options};
    await database().prepare('INSERT INTO menu_overrides (id,value) VALUES (?,?) ON CONFLICT(id) DO UPDATE SET value=excluded.value').bind(current.id,JSON.stringify(value)).run();return json({ok:true});
+  }
+  if(path==='staff/menu'&&method==='POST'){
+   const b=await readBody(request);
+   const name=text(b.name,100,true),category=text(b.category,60,true),description=text(b.description||'',500);
+   const price=b.price;
+   if(name.length<2||category.length<2||!Number.isSafeInteger(price)||price<1||price>100000)throw new HttpError(400,'Enter an item name, category and a whole-shilling price from KSh 1 to KSh 100,000.');
+   const id='staff-'+crypto.randomUUID();
+   const item={id,name,category,description,price,options:[{id:'regular',label:'Regular',price}],page:0,available:true,needsReview:false,custom:true};
+   await database().prepare('INSERT INTO menu_overrides (id,value) VALUES (?,?)').bind(id,JSON.stringify(item)).run();
+   return json({ok:true,item},201);
   }
   if(path==='staff/order'&&method==='PUT'){
    const b=await readBody(request);const order=await database().prepare('SELECT * FROM orders WHERE id=?').bind(b.id).first<any>();if(!order)throw new HttpError(404,'Order not found.');

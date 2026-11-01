@@ -1,6 +1,6 @@
 import {business} from './business.ts';
 export type Option = {id:string;label:string;price:number};
-export type MenuItem = {id:string;name:string;category:string;description:string;price:number;options:Option[];page:number;available:boolean;needsReview:boolean};
+export type MenuItem = {id:string;name:string;category:string;description:string;price:number;options:Option[];page:number;available:boolean;needsReview:boolean;custom?:boolean};
 export type CartLine = {itemId:string;optionId:string;quantity:number};
 export type Point = {lat:number;lng:number};
 export type Settings = {pickupEnabled:boolean;deliveryEnabled:boolean;zones:{id:string;name:string;fee:number}[];restaurantPoint:Point|null;address:string;phone:string;hours:string;pickupInstructions:string};
