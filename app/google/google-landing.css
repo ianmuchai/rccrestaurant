@@ -1,0 +1,31 @@
+.google-landing{--gl-paper:#f5efe5;--gl-wine:#5a1d27;--gl-ink:#29201e;--gl-muted:#796f66;min-height:100svh;position:relative;overflow:hidden;background:var(--gl-paper);color:var(--gl-ink);padding:clamp(22px,5vw,56px) 22px 28px;isolation:isolate}
+.google-landing__glow{position:absolute;z-index:-1;width:min(75vw,800px);height:min(75vw,800px);right:-25%;top:-40%;border-radius:50%;background:radial-gradient(circle,#e7d6c377 0,transparent 68%);pointer-events:none}
+.google-landing__wrap{width:min(100%,680px);margin:0 auto}
+.google-landing__header{height:64px;display:flex;align-items:center;justify-content:space-between;margin-bottom:clamp(22px,5vh,47px)}
+.google-landing__header img{width:80px;height:62px;object-fit:contain;mix-blend-mode:multiply}
+.google-landing__location{font-size:9px;letter-spacing:2px;font-weight:600;color:#8f7565}
+.google-landing__hero{min-height:260px;position:relative;display:flex;align-items:center;overflow:hidden;border-radius:17px;background:#451820;color:#fff8ee;padding:clamp(27px,6vw,45px);box-shadow:0 18px 55px #36141718}
+.google-landing__photo{position:absolute;inset:0 0 0 34%;background-image:linear-gradient(90deg,#451820 0%,#451820e8 15%,#45182066 58%,#2f111524 100%),url('/photos/rcc-035.webp');background-size:cover;background-position:center 58%;opacity:.9}
+.google-landing__copy{position:relative;z-index:1;max-width:380px}
+.google-landing__eyebrow{display:flex;align-items:center;gap:9px;font-size:8px;letter-spacing:2px;color:#e7cbb7;font-weight:600}
+.google-landing__eyebrow i{width:6px;height:6px;background:#e3ab88;border-radius:50%}
+.google-landing__hero h1{font:450 clamp(35px,7vw,55px)/1.06 'Manrope',Arial,sans-serif;letter-spacing:-2px;margin:20px 0 14px}
+.google-landing__hero h1 em{font-style:normal;color:#edc4a4}
+.google-landing__hero p{font-size:12px;line-height:1.7;color:#fff5e4c9}
+.google-landing__choices{display:grid;gap:11px;margin:19px 0 0}
+.google-choice{display:flex;min-height:75px;align-items:center;gap:15px;padding:14px 18px;border:1px solid #e8ddd0;border-radius:12px;background:#fffaf3d9;color:var(--gl-ink);box-shadow:0 5px 20px #472d1b08;transition:transform .18s ease,border-color .18s ease,background .18s ease}
+.google-choice:hover{transform:translateY(-2px);border-color:#c9ac96;background:#fffdf8}
+.google-choice:focus-visible{outline:3px solid #aa5848;outline-offset:3px}
+.google-choice__icon{flex:0 0 43px;height:43px;border-radius:50%;display:grid;place-items:center;background:#efe5d9;color:var(--gl-wine)}
+.google-choice__text{display:flex;flex:1;min-width:0;flex-direction:column;gap:5px}
+.google-choice__text strong{font-size:15px;font-weight:600;letter-spacing:-.1px}
+.google-choice__text small{font-size:12px;color:var(--gl-muted);line-height:1.45}
+.google-choice__arrow{color:#987e6d;flex:none}
+.google-choice--maps .google-choice__icon{background:#e6ede2;color:#4f7146}
+.google-choice--review .google-choice__icon{background:#f5e8d4;color:#a36a27}
+.google-choice__arrow{transition:transform .18s ease}
+.google-choice:hover .google-choice__arrow{transform:translate(2px,-2px)}
+.google-landing__footer{display:flex;align-items:center;justify-content:center;gap:12px;color:#998b7e;font-size:8px;letter-spacing:1.5px;margin-top:25px}
+.google-landing__footer i{font-size:8px;color:#b99172;font-style:normal}
+@media(max-width:520px){.google-landing{padding:15px 18px 22px}.google-landing__wrap{max-width:420px}.google-landing__header{height:52px;margin-bottom:22px}.google-landing__header img{width:68px;height:52px}.google-landing__location{font-size:8px;letter-spacing:1.5px}.google-landing__hero{min-height:230px;border-radius:14px;padding:26px 23px}.google-landing__photo{left:15%;background-position:60% center}.google-landing__hero h1{font-size:39px;margin:17px 0 12px}.google-landing__hero p{font-size:11px}.google-landing__choices{gap:9px;margin-top:14px}.google-choice{min-height:74px;padding:12px 14px;gap:12px}.google-choice__icon{flex-basis:40px;height:40px}.google-choice__text strong{font-size:14px}.google-choice__text small{font-size:11px}.google-landing__footer{margin-top:19px;font-size:7px;gap:9px}}
+@media(prefers-reduced-motion:reduce){.google-choice,.google-choice__arrow{transition:none}.google-choice:hover{transform:none}}

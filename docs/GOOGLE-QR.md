@@ -8,7 +8,7 @@ Print-ready A5 portrait PDFs with vector QR modules, embedded fonts, four-module
 
 These are static QR codes with no subscription, QR-vendor account, tracking service, scan limit or encoded expiry. The domain version requires continued ownership and working hosting for rcc.co.ke. The direct backup does not depend on that domain, but its Google profile destination must continue to exist.
 
-`app/google/route.ts` redirects GET and HEAD requests directly to `business.maps`, with no cached destination or interstitial page. Update that verified address in `lib/business.ts` if RCC's listing changes; the domain QR can remain unchanged.
+The branded code opens `/google`, a mobile-friendly choice page for the RCC menu, directions to the verified Google Maps listing, and Google reviews. The review option opens RCC's listing and tells diners to choose “Write a review” there. The destination URL remains the same, so existing printed codes continue to work. The page is excluded from search indexing. The direct backup code still opens Google Maps immediately. Update the verified listing in `lib/business.ts` if RCC's Google destination changes; the branded QR can remain unchanged.
 
 Regenerate locally with Python:
 
