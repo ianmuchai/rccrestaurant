@@ -8,3 +8,15 @@
 .admin-login>p:first-child{font-size:13px;color:var(--muted);line-height:1.6}
 .admin-login .error{font-size:12px}
 @media(max-width:700px){.admin-account-actions{gap:12px}.admin-account-actions .text-button{font-size:10px}}
+.admin-new-menu{padding:15px 20px}
+.admin-add-toggle{width:100%;display:flex;align-items:center;justify-content:space-between;gap:14px;padding:5px 0;border:0;background:transparent;color:var(--wine);font:500 16px var(--sans);text-align:left;cursor:pointer}
+.admin-new-menu .admin-form{margin-top:18px;padding-top:18px;border-top:1px solid var(--line)}
+.admin-menu-fields{display:grid;grid-template-columns:1fr 1fr;gap:10px;align-items:start}
+.admin-menu-fields>p,.admin-menu-fields>.field-hint{grid-column:1/-1;margin:0}
+.admin-menu-row input[type=text]{max-width:100%}
+.admin-toast{position:fixed;z-index:1000;top:max(16px,env(safe-area-inset-top));left:50%;transform:translateX(-50%);width:min(560px,calc(100vw - 32px));display:flex;align-items:center;justify-content:space-between;gap:18px;padding:14px 18px;border:1px solid #d8c2ac;border-radius:12px;background:#fffaf3;color:#3b241c;box-shadow:0 12px 36px #24130b30;font-size:13px;line-height:1.5;animation:admin-toast-in .18s ease-out}
+.admin-toast.success{border-color:#bbd1b5;background:#f5fbf2}
+.admin-toast.error{border-color:#e4b6b3;background:#fff5f4;color:#81252a}
+.admin-toast button{flex:0 0 auto;width:28px;height:28px;border:0;border-radius:50%;background:#54151c12;color:inherit;font-size:21px;line-height:1;cursor:pointer}
+@keyframes admin-toast-in{from{opacity:0;transform:translate(-50%,-8px)}to{opacity:1;transform:translate(-50%,0)}}
+@media(max-width:700px){.admin-menu-fields{grid-template-columns:1fr}.admin-toast{top:max(10px,env(safe-area-inset-top));font-size:12px}}

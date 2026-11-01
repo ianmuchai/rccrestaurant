@@ -9,8 +9,8 @@ export function database():D1Database {
 export async function catalog():Promise<MenuItem[]> {
  const {results}=await database().prepare('SELECT id,value FROM menu_overrides').all<{id:string;value:string}>();
  const changes=new Map(results.map(r=>[r.id,JSON.parse(r.value)]));
- const base=(baseCatalog as MenuItem[]).map(i=>({...i,...changes.get(i.id)}));
- const additions=results.map(r=>JSON.parse(r.value) as MenuItem).filter(i=>i.custom===true);
+ const base=(baseCatalog as MenuItem[]).map(i=>({...i,...changes.get(i.id)})).filter(i=>!i.deleted);
+ const additions=results.map(r=>JSON.parse(r.value) as MenuItem&{deleted?:boolean}).filter(i=>i.custom===true&&!i.deleted);
  return [...base,...additions];
 }
 export async function settings():Promise<Settings> {

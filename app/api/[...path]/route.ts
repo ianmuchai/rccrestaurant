@@ -121,10 +121,11 @@ async function handle(request:Request) {
    const s=validateSettings(await readBody(request));await database().prepare("INSERT INTO settings (key,value) VALUES ('restaurant',?) ON CONFLICT(key) DO UPDATE SET value=excluded.value").bind(JSON.stringify(s)).run();return json({ok:true});
   }
   if(path==='staff/menu'&&method==='PUT'){
-   const b=await readBody(request);const current=(await catalog()).find(i=>i.id===b.id);if(!current)throw new HttpError(404,'Item not found.');
+   const b=await readBody(request);const id=text(b.id,100,true),current=(await catalog()).find(i=>i.id===id);if(!current)throw new HttpError(404,'Item not found.');
+   const name=text(b.name,100,true),category=text(b.category,60,true);if(name.length<2||category.length<2)throw new HttpError(400,'Enter an item name and category with at least two characters.');
    if(typeof b.available!=='boolean'||typeof b.needsReview!=='boolean'||!Array.isArray(b.options)||b.options.length!==current.options.length)throw new HttpError(400,'Invalid menu update.');
    const options=current.options.map(o=>{const update=b.options.find((p:any)=>p.id===o.id);if(!update||!Number.isSafeInteger(update.price)||update.price<1||update.price>100000)throw new HttpError(400,'Enter valid whole-shilling prices.');return {...o,price:update.price};});
-   const value={...(current.custom?current:{}),available:b.available,needsReview:b.needsReview,price:options[0].price,options};
+   const value={...current,name,category,available:b.available,needsReview:b.needsReview,price:options[0].price,options};
    await database().prepare('INSERT INTO menu_overrides (id,value) VALUES (?,?) ON CONFLICT(id) DO UPDATE SET value=excluded.value').bind(current.id,JSON.stringify(value)).run();return json({ok:true});
   }
   if(path==='staff/menu'&&method==='POST'){
@@ -137,6 +138,12 @@ async function handle(request:Request) {
    await database().prepare('INSERT INTO menu_overrides (id,value) VALUES (?,?)').bind(id,JSON.stringify(item)).run();
    return json({ok:true,item},201);
   }
+  if(path==='staff/menu'&&method==='DELETE'){
+   const b=await readBody(request),id=text(b.id,100,true),current=(await catalog()).find(i=>i.id===id);if(!current)throw new HttpError(404,'Item not found.');
+   if(current.custom)await database().prepare('DELETE FROM menu_overrides WHERE id=?').bind(current.id).run();
+   else await database().prepare('INSERT INTO menu_overrides (id,value) VALUES (?,?) ON CONFLICT(id) DO UPDATE SET value=excluded.value').bind(current.id,JSON.stringify({...current,deleted:true})).run();
+   return json({ok:true});
+  }
   if(path==='staff/order'&&method==='PUT'){
    const b=await readBody(request);const order=await database().prepare('SELECT * FROM orders WHERE id=?').bind(b.id).first<any>();if(!order)throw new HttpError(404,'Order not found.');
    const next:Record<string,string[]>={pending:['accepted','cancelled'],accepted:['preparing','cancelled'],preparing:[order.fulfillment==='pickup'?'ready':'out-for-delivery','cancelled'],ready:['completed'],'out-for-delivery':['completed']};
@@ -148,5 +155,5 @@ async function handle(request:Request) {
  }
  throw new HttpError(404,'Not found.');
 }
-async function route(request:Request){try{return await handle(request);}catch(e){return json({error:e instanceof HttpError?e.message:e instanceof Error&& !/SQL|D1|database|table/i.test(e.message)?e.message:'The service is being prepared. Please try again shortly.'},e instanceof HttpError?e.status:400);}}
-export const GET=route;export const POST=route;export const PUT=route;
+async function route(request:Request){try{return await handle(request);}catch(e){if(e instanceof HttpError)return json({error:e.message},e.status);console.error('Unhandled RCC API error',e instanceof Error?e.name:'unknown');return json({error:'The service is temporarily unavailable. Please try again shortly.'},500);}}
+export const GET=route;export const POST=route;export const PUT=route;export const DELETE=route;
