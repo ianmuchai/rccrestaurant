@@ -1,18 +1,17 @@
 import type {Metadata} from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import {ArrowUpRight,BookOpen,MapPin,Star} from 'lucide-react';
+import {ArrowUpRight,MapPin,Star} from 'lucide-react';
 import {business} from '../../lib/business';
 import './google-landing.css';
 
 export const metadata:Metadata={
  title:'Your RCC visit starts here | RCC Restaurant',
- description:'Browse the RCC menu, find us in Kitengela, or leave a Google review.',
+ description:'Find us in Kitengela or leave a Google review.',
  robots:{index:false,follow:true},
 };
 
 const choices=[
- {label:'Explore the menu',detail:'Find something you’ll love.',href:'/menu',icon:BookOpen,external:false,kind:'menu'},
  {label:'Share directions',detail:'We’re on Namanga Road, Kitengela.',href:business.maps,icon:MapPin,external:true,kind:'maps'},
  {label:'Review us on Google',detail:'Open our profile and choose Write a review.',href:business.maps,icon:Star,external:true,kind:'review'},
 ] as const;
